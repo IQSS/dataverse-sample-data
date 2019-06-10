@@ -1,0 +1,12 @@
+{
+  "name": "Open Source at Harvard",
+  "alias": "open-source-at-harvard",
+  "dataverseContacts": [
+    {
+      "contactEmail": "philip_durbin@harvard.edu"
+    }
+  ],
+  "affiliation": "Harvard University",
+  "description": "See <a href=\"https://github.com/IQSS/open-source-at-harvard\">https://github.com/IQSS/open-source-at-harvard</a> for more information about open source at Harvard.",
+  "dataverseType": "RESEARCH_PROJECTS"
+}
