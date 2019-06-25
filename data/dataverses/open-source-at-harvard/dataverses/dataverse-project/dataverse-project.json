@@ -1,0 +1,12 @@
+{
+  "name": "The Dataverse Project",
+  "alias": "dataverse-project",
+  "dataverseContacts": [
+    {
+      "contactEmail": "philip_durbin@harvard.edu"
+    }
+  ],
+  "affiliation": "Harvard University",
+  "description": "See <a href=\"https://github.com/IQSS/dataverse\">https://github.com/IQSS/dataverse</a> for more information about Dataverse.",
+  "dataverseType": "RESEARCH_PROJECTS"
+}
