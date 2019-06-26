@@ -1,6 +1,8 @@
 from pyDataverse.api import Api
 import json
 import dvconfig
+import os
+import time
 base_url = dvconfig.base_url
 api_token = dvconfig.api_token
 paths = dvconfig.sample_data
@@ -35,8 +37,18 @@ for path in paths:
         dataverse = parent
         resp = api.create_dataset(dataverse, json.dumps(metadata))
         print(resp)
-        # TODO: upload files
-        #dataset_pid = resp.json()['data']['persistentId']
-        #tabular_file = 'data/dataverses/open-source-at-harvard/datasets/open-source-at-harvard/files/2019-02-25.tsv'
-        #resp = api.upload_file(dataset_pid, tabular_file)
-        #print(resp)
+        dataset_pid = resp.json()['data']['persistentId']
+        files_dir = path.replace(json_file, '') + 'files'
+        print(files_dir)
+        if not os.path.isdir(files_dir):
+            pass
+        else:
+            # TODO: support file hierarchy
+            for f in os.listdir(files_dir):
+                datafile = files_dir + '/' + f
+                print(datafile)
+                # This sleep is here to prevent the dataset from being permanently
+                # locked because a tabular file was uploaded first.
+                time.sleep(3)
+                resp = api.upload_file(dataset_pid, datafile)
+                print(resp)
