@@ -21,20 +21,20 @@ Activate the virtual environment you just created.
 
     source ~/envs/dataverse-sample-data/bin/activate
 
+Change directories into the repo that you cloned.
+
+    cd dataverse-sample-data
+
 Install dependencies into the virtual environment, especially [pyDataverse][].
 
     pip install -r requirements.txt
 
-Copy `dvconfig.py.sample` to `dvconfig.py` and add your API token.
+Copy `dvconfig.py.sample` to `dvconfig.py` and add your API token. Note that the config file specifies which sample data will be created.
 
 ## Adding sample data
 
-Create a dataverse.
+Assuming you have already run the `source` and `cd` commands above, you should be able to run the following command to create sample data.
 
-    python create_dataverse.py
-
-Create a dataset and upload files.
-
-    python create_dataset.py
+    python create_sample_data.py
 
 [pyDataverse]: https://pypi.org/project/pyDataverse/

@@ -1,2 +1,9 @@
 base_url = 'https://demo.dataverse.org'
-api_token= ''
+api_token = ''
+# sample data will be created in the following order
+sample_data = [
+'data/dataverses/open-source-at-harvard/open-source-at-harvard.json',
+'data/dataverses/open-source-at-harvard/datasets/open-source-at-harvard/open-source-at-harvard.json',
+'data/dataverses/open-source-at-harvard/dataverses/dataverse-project/dataverse-project.json',
+'data/dataverses/open-source-at-harvard/dataverses/dataverse-project/datasets/dataverse-irc-metrics/dataverse-irc-metrics.json',
+]
