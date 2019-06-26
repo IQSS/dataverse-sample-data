@@ -15,6 +15,8 @@ def main():
     dataset_ids.sort(reverse=True)
     for dataset_id in dataset_ids:
         print('Deleting dataset id ' + str(dataset_id))
+        # If you can't delete a dataset due to a lock, try this:
+        # curl -H "X-Dataverse-key: $ADMIN_API_TOKEN" -X DELETE "$SERVER_URL/api/datasets/$ID/locks"
         resp = api.delete_dataset(dataset_id, is_pid=False)
         print(resp)
     dataverse_ids.sort(reverse=True)
