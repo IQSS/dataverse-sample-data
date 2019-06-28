@@ -29,6 +29,8 @@ for path in paths:
         identifier = metadata['alias']
         resp = api.create_dataverse(identifier, json.dumps(metadata), parent=parent)
         print(resp)
+        resp = api.publish_dataverse(identifier)
+        print(resp)
     else:
         print('Creating ' + dvtype + ' ' + json_file + ' in dataverse ' + parent)
         dataset_json = path
