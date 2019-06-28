@@ -49,8 +49,8 @@ for path in paths:
             for f in os.listdir(files_dir):
                 datafile = files_dir + '/' + f
                 print(datafile)
+                resp = api.upload_file(dataset_pid, datafile)
+                print(resp)
                 # This sleep is here to prevent the dataset from being permanently
                 # locked because a tabular file was uploaded first.
                 time.sleep(3)
-                resp = api.upload_file(dataset_pid, datafile)
-                print(resp)
