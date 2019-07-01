@@ -8,6 +8,11 @@ api_token = dvconfig.api_token
 paths = dvconfig.sample_data
 api = Api(base_url, api_token)
 print(api.status)
+resp = api.get_dataverse(':root')
+if (resp.status_code == 401):
+    print('Publishing root dataverse.')
+    resp = api.publish_dataverse(':root')
+    print(resp)
 for path in paths:
     parts = path.split('/')
     json_file = parts[-1]
