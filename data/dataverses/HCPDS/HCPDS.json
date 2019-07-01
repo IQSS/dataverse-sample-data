@@ -1,0 +1,12 @@
+{
+  "name": "HCPDS Dataverse",
+  "alias": "HCPDS",
+  "dataverseContacts": [
+    {
+      "displayOrder": 0,
+      "contactEmail": "jfinlay@hsph.harvard.edu"
+    }
+  ],
+  "affiliation": "Harvard University",
+  "dataverseType": "ORGANIZATIONS_INSTITUTIONS"
+}
