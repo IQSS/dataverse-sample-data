@@ -3,6 +3,7 @@ import json
 import dvconfig
 import os
 import time
+import requests
 base_url = dvconfig.base_url
 api_token = dvconfig.api_token
 paths = dvconfig.sample_data
@@ -45,6 +46,7 @@ for path in paths:
         resp = api.create_dataset(dataverse, json.dumps(metadata))
         print(resp)
         dataset_pid = resp.json()['data']['persistentId']
+        dataset_dbid = resp.json()['data']['id']
         files_dir = path.replace(json_file, '') + 'files'
         print(files_dir)
         if not os.path.isdir(files_dir):
@@ -59,3 +61,9 @@ for path in paths:
                 # This sleep is here to prevent the dataset from being permanently
                 # locked because a tabular file was uploaded first.
                 time.sleep(3)
+        # Sleep a little more to avoid org.postgresql.util.PSQLException: ERROR: deadlock detected
+        time.sleep(2)
+        print('Publishing dataset id ' + str(dataset_dbid))
+        # TODO: Switch to pyDataverse api.publish_dataset after this issue is fixed: https://github.com/AUSSDA/pyDataverse/issues/24
+        resp = requests.post(base_url + '/api/datasets/' + str(dataset_dbid) + '/actions/:publish?type=major&key=' + api_token)
+        print(resp)
