@@ -1,0 +1,146 @@
+{
+  "id": 24,
+  "identifier": "U6AEZM",
+  "persistentUrl": "http://dx.doi.org/10.5072/FK2/U6AEZM",
+  "protocol": "doi",
+  "authority": "10.5072/FK2",
+  "publisher": "Demo Dataverse",
+  "publicationDate": "2015-04-20",
+  "datasetVersion": {
+    "id": 7,
+    "versionNumber": 2,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "productionDate": "Production Date",
+    "lastUpdateTime": "2015-04-20T13:58:35Z",
+    "releaseTime": "2015-04-20T13:58:35Z",
+    "createTime": "2015-04-20T13:57:32Z",
+    "license": "CC0",
+    "termsOfUse": "CC0 Waiver",
+    "termsOfAccess": "You need to request for access.",
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "This is my test dataset"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Castro, Eleni"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Harvard"
+                },
+                "authorIdentifierScheme": {
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "ORCID"
+                },
+                "authorIdentifier": {
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "14252638xx"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Admin, Dataverse"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Dataverse.org"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "support@dataverse.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "This is my dataset"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Test"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Admin, Dataverse"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2015-04-20"
+          }
+        ]
+      }
+    },
+    "citation": "Castro, Eleni, 2015, \"This is my test dataset\", doi:10.5072/FK2/U6AEZM, Demo Dataverse, V2"
+  }
+}

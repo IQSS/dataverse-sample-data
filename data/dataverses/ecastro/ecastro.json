@@ -1,0 +1,13 @@
+{
+  "name": "Eleni Castro Dataverse",
+  "alias": "ecastro",
+  "dataverseContacts": [
+    {
+      "displayOrder": 0,
+      "contactEmail": "support@dataverse.org"
+    }
+  ],
+  "affiliation": "Dataverse.org",
+  "description": "This is my Dataverse.",
+  "dataverseType": "RESEARCHERS"
+}
