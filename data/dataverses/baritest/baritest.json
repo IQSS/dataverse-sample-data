@@ -1,0 +1,13 @@
+{
+  "name": "BARI Automated Deposits Test Dataverse",
+  "alias": "baritest",
+  "dataverseContacts": [
+    {
+      "displayOrder": 0,
+      "contactEmail": "support@dataverse.org"
+    }
+  ],
+  "affiliation": "BARI/Dataverse",
+  "description": "This dataverse is for testing scheduled automated deposits (\"streaming\") of data available from Analyze Boston. ",
+  "dataverseType": "RESEARCH_PROJECTS"
+}

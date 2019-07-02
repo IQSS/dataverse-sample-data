@@ -1,0 +1,121 @@
+{
+  "id": 29480,
+  "identifier": "FK2/Q1RSNG",
+  "persistentUrl": "https://doi.org/10.5072/FK2/Q1RSNG",
+  "protocol": "doi",
+  "authority": "10.5072",
+  "publisher": "Demo Dataverse",
+  "publicationDate": "2018-06-20",
+  "storageIdentifier": "file://10.5072/FK2/Q1RSNG",
+  "datasetVersion": {
+    "id": 16988,
+    "storageIdentifier": "file://10.5072/FK2/Q1RSNG",
+    "versionNumber": 45,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "productionDate": "Production Date",
+    "UNF": "UNF:6:3i2y5+lApPszCC7Xa3YEyA==",
+    "lastUpdateTime": "2018-08-13T00:40:55Z",
+    "releaseTime": "2018-08-13T00:40:55Z",
+    "createTime": "2018-08-13T00:40:37Z",
+    "license": "CC0",
+    "termsOfUse": "CC0 Waiver",
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "BARI/Analyze Boston, Building Permits Records "
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Andreev, Leonid"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "BARI/Dataverse"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Andreev, Leonid"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "BARI/Dataverse"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "support@dataverse.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "This dataset contains Building Permits records built from the data available from Analyze Boston, processed and geocoded with Permits.Syntax.Records.2018.R script from the BARI project.  "
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Andreev, Leonid"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2018-06-19"
+          }
+        ]
+      }
+    },
+    "citation": "Andreev, Leonid, 2018, \"BARI/Analyze Boston, Building Permits Records\", https://doi.org/10.5072/FK2/Q1RSNG, Demo Dataverse, V45, UNF:6:3i2y5+lApPszCC7Xa3YEyA=="
+  }
+}
