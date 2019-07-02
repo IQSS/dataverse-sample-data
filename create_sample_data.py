@@ -9,6 +9,16 @@ api_token = dvconfig.api_token
 paths = dvconfig.sample_data
 api = Api(base_url, api_token)
 print(api.status)
+# TODO limit amount of recursion
+def check_dataset_lock(dataset_dbid):
+    query_str = '/datasets/' + str(dataset_dbid) + '/locks'
+    params = {}
+    resp = api.get_request(query_str, params=params, auth=True)
+    locks = resp.json()['data']
+    if (locks):
+        print('Lock found for dataset id ' + str(dataset_dbid) + '... sleeping...')
+        time.sleep(2)
+        check_dataset_lock(dataset_dbid)
 resp = api.get_dataverse(':root')
 if (resp.status_code == 401):
     print('Publishing root dataverse.')
@@ -58,9 +68,9 @@ for path in paths:
                 print(datafile)
                 resp = api.upload_file(dataset_pid, datafile)
                 print(resp)
-                # This sleep is here to prevent the dataset from being permanently
-                # locked because a tabular file was uploaded first.
-                time.sleep(3)
+                ## This lock check and sleep is here to prevent the dataset from being permanently
+                ## locked because a tabular file was uploaded first.
+                check_dataset_lock(dataset_dbid)
         # Sleep a little more to avoid org.postgresql.util.PSQLException: ERROR: deadlock detected
         time.sleep(2)
         print('Publishing dataset id ' + str(dataset_dbid))
