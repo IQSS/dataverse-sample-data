@@ -1,0 +1,12 @@
+{
+  "name": "Manchester Dataverse",
+  "alias": "manchester",
+  "dataverseContacts": [
+    {
+      "displayOrder": 0,
+      "contactEmail": "support@dataverse.org"
+    }
+  ],
+  "affiliation": "Dataverse.org",
+  "dataverseType": "ORGANIZATIONS_INSTITUTIONS"
+}
