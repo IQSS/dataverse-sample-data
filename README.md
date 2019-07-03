@@ -41,7 +41,10 @@ Assuming you have already run the `source` and `cd` commands above, you should b
 
 - Because of how file hierarchy support was implemented (using the [Updating File Metadata][] API endpoint), multiple files with the same name are not supported. The following error is expected: "This file already exists in the dataset."
 
+## Contributing
+
+We love contributors! Please see our [Contributing Guide][] for ways you can help.
+
 [Updating File Metadata]: http://guides.dataverse.org/en/4.15/api/native-api.html#updating-file-metadata
-
-
+[Contributing Guide]: CONTRIBUTING.md
 [pyDataverse]: https://pypi.org/project/pyDataverse/
