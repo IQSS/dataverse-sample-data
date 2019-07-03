@@ -37,4 +37,11 @@ Assuming you have already run the `source` and `cd` commands above, you should b
 
     python create_sample_data.py
 
+## Known issues
+
+- Because of how file hierarchy support was implemented (using the [Updating File Metadata][] API endpoint), multiple files with the same name are not supported. The following error is expected: "This file already exists in the dataset."
+
+[Updating File Metadata]: http://guides.dataverse.org/en/4.15/api/native-api.html#updating-file-metadata
+
+
 [pyDataverse]: https://pypi.org/project/pyDataverse/

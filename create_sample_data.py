@@ -4,6 +4,7 @@ import dvconfig
 import os
 import time
 import requests
+from io import StringIO
 base_url = dvconfig.base_url
 api_token = dvconfig.api_token
 paths = dvconfig.sample_data
@@ -20,6 +21,7 @@ def check_dataset_lock(dataset_dbid):
         time.sleep(2)
         check_dataset_lock(dataset_dbid)
 resp = api.get_dataverse(':root')
+buff = StringIO("")
 if (resp.status_code == 401):
     print('Publishing root dataverse.')
     resp = api.publish_dataverse(':root')
@@ -59,18 +61,29 @@ for path in paths:
         dataset_dbid = resp.json()['data']['id']
         files_dir = path.replace(json_file, '') + 'files'
         print(files_dir)
-        if not os.path.isdir(files_dir):
-            pass
-        else:
-            # TODO: support file hierarchy
-            for f in os.listdir(files_dir):
-                datafile = files_dir + '/' + f
-                print(datafile)
-                resp = api.upload_file(dataset_pid, "'" + datafile + "'")
+        for path,subdir,files in os.walk(files_dir):
+           for name in files:
+                filepath = os.path.join(path,name)
+                relpath = os.path.relpath(filepath,files_dir)
+                # "directoryLabel" is used to populate "File Path"
+                directoryLabel, filename = os.path.split(relpath)
+                resp = api.upload_file(dataset_pid, "'" + filepath + "'")
                 print(resp)
+                file_id = resp['data']['files'][0]['dataFile']['id']
                 ## This lock check and sleep is here to prevent the dataset from being permanently
                 ## locked because a tabular file was uploaded first.
                 check_dataset_lock(dataset_dbid)
+                file_metadata = {}
+                # TODO: Think more about where the description comes from. A "sidecar" file as proposed at https://github.com/IQSS/dataverse/issues/5924#issuecomment-499605672 ?
+                #file_metadata['description'] = 'Sidecar?'
+                file_metadata['directoryLabel'] = directoryLabel
+                jsonData = json.dumps(file_metadata)
+                data = { 'jsonData' : jsonData }
+                headers = {
+                    'X-Dataverse-key': api_token,
+                }
+                resp = requests.post(base_url + '/api/files/' + str(file_id) + '/metadata', data=data, headers=headers, stream=True, files=buff)
+                print(resp)
         # Sleep a little more to avoid org.postgresql.util.PSQLException: ERROR: deadlock detected
         time.sleep(2)
         print('Publishing dataset id ' + str(dataset_dbid))
