@@ -7,7 +7,7 @@ We love contributors! You can contribute sample data, provide ideas for sample d
 When contributing sample data, please do the following before making your pull request:
 
 - Replace all email addresses with dataverse-sample-data@mailinator.com
-- Do not include files larger than 10 MB.
+- Do not include files larger than 10 MB. (The script `show_large_files.sh` can help you find them.)
 
 ## Contributing ideas
 
