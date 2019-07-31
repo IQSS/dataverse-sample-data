@@ -1,0 +1,402 @@
+{
+  "datasetVersion": {
+    "id": 44747,
+    "versionNumber": 2,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "versionNote": "",
+    "distributionDate": "2013",
+    "productionDate": "Production Date",
+    "lastUpdateTime": "2013-10-03T20:57:45Z",
+    "releaseTime": "2013-10-03T00:00:00Z",
+    "createTime": "2013-10-03T19:35:49Z",
+    "license": "NONE",
+    "termsOfUse": "<div style=\"padding-left: 30px;\"> <ul style=\"list-style-type: decimal;\" ><li> The Murray Archive (the Distributor) has granted me a revocable license to use this dataset solely for the purposes of conducting research, and the Distributor may terminate this license at any time and for any reason. </li> <li> I will use the dataset solely for statistical analysis and reporting of aggregated information, and not for investigation of specific individuals or organizations, except when identification i\ns authorized in writing by the Distributor.   </li> <li>I will produce no links among the Distributor’s datasets or among the Distributor’s data and other datasets that could identify individuals or organizations. </li> <li>I represent that neither I, nor anyone I know, has any prior knowledge of the possible identities of any study participants in any dataset that I am being licensed to use.   </li> <li> I will not knowingly divulge any information that could be used to identify individual part\nicipants in the study, nor will I attempt to identify or contact any study participant, and I agree to use any precautions necessary to prevent such identification.\n</li> <li> I will make no use of the identity of any person or establishment discovered inadvertently.  If I suspect that I might recognize or know a study participant, I will immediately inform the Distributor, and I will not use or retain a copy of data regarding that study participant.  If these measures to resolve an identity disclosure are not sufficient, the Distributor may terminate my use of the dataset. </li> <li> I will not reproduce the dataset except as is necessary for my scholarly\npurposes.  I will destroy the dataset upon the completion of my scholarly work with it.\n</li> <li> I will not share data from the dataset (in any form or by any means) with any third party, including other members of my research team, as I understand that all users of data must obtain the data directly from the Distributor. </li> <li> I will make appropriate acknowledgement of the contributor of the dataset as well as the Distributor in any manuscript or presentation (published or unpublished) using the citation standard documented here: <a  href=\"http://thedata.org/citation\"> http\n://thedata.org/citation</a> </li> <li> THE DISTRIBUTOR MAKES NO WARRANTIES, EXPRESS OR IMPLIED, BY OPERATION OF LAW OR OTHERWISE, REGARDING OR RELATING TO THE DATASET.   </li> </ul> </div>",
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Record of American Democracy, All Key Data Files"
+          },
+          {
+            "typeName": "otherId",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "otherIdValue": {
+                  "typeName": "otherIdValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ROAD_key"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "King, Gary; Palmquist, Bradley; Adams, Greg; Altman, Micah; Benoit, Kenneth; Gay, Claudine; Lewis, Jeffrey B.; Mayer, Russ; and Reinhardt, Eric"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "road@mailinator.com"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "The Record of American Democracy (ROAD) data provide election returns, socioeconomic summaries, and demographic details about the American public at unusually low levels of geographic aggregation. The NSF-supported ROAD project spans every state in the country from 1984 through 1990 (including some off-year elections). These data enable research on topics such as electoral behavior, the political characteristics of local community context, electoral geography, the role of minority groups in elections and legislative redistricting, split ticket voting and divided government, and elections under federalism. One set of files (Part 4, PRECINCT directory, consisting of 205 SPSS portable files) includes every election at and above state House, along with party registration and other variables, in each state for the roughly 170,000 precincts nationwide (about 60 times the number of counties). Another set of files (Part 5, MCDGRP directo\nry, 52 SPSS portable files) has added to these roughly 30-40 political variables an additional 3,725 variables merged from the 1990 United States Census for 47,327 aggregate units called MCD Groups. The MCD Group is a construct for purposes of this data collection. It is based on a merging of the electoral precincts and Census Minor Civil Divisions (MCDs). An MCD is about the size of a city or town. An MCD Group is smaller than or equal to a county and (except in California) is greater than or equal to the size of an MCD. The MCD Group units completely tile the United States landmass. The program used to create the MCD group level is also included as part of this collection, as well as the input and output files. This collection also includes geographic boundary files so users can easily draw maps with these data.This particular set of files contains all key data files that comprise the study. Documentation and frequently asked questions are available online at the\n<a href= \"http://www.hmdc.harvard.edu/ROAD/\">ROAD Website</a>. A downloadable PDF codebook is also available in the files section of this study."
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "congressional districts"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "election districts"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "election returns"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "elections"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "local elections"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "national elections"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "redistricting"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "state elections"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "voter registration"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "voter turnout"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "voting behavior"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "voting precints"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "thesaurus"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "topicClassification",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "topicClassValue": {
+                  "typeName": "topicClassValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ROAD"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "producer",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "producerName": {
+                  "typeName": "producerName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ROAD"
+                },
+                "producerURL": {
+                  "typeName": "producerURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "http://road.hmdc.harvard.edu/"
+                },
+                "producerLogoURL": {
+                  "typeName": "producerLogoURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "http://road.hmdc.harvard.edu/files/road/files/road_logo.jpeg"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "productionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "1997"
+          },
+          {
+            "typeName": "distributor",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "distributorName": {
+                  "typeName": "distributorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "The Harvard Dataverse Network"
+                },
+                "distributorURL": {
+                  "typeName": "distributorURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "http://thedata.harvard.edu/dvn/"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "distributionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2013"
+          },
+          {
+            "typeName": "dateOfCollection",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dateOfCollectionStart": {
+                  "typeName": "dateOfCollectionStart",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "1987"
+                },
+                "dateOfCollectionEnd": {
+                  "typeName": "dateOfCollectionEnd",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "1997"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "census/enumeration data"
+            ]
+          }
+        ]
+      },
+      "geospatial": {
+        "displayName": "Geospatial Metadata",
+        "fields": [
+          {
+            "typeName": "geographicCoverage",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "otherGeographicCoverage": {
+                  "typeName": "otherGeographicCoverage",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "United States"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "socialscience": {
+        "displayName": "Social Science and Humanities Metadata",
+        "fields": [
+          {
+            "typeName": "universe",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "The population of the United States."
+            ]
+          }
+        ]
+      }
+    },
+    "citation": "King, Gary; Palmquist, Bradley; Adams, Greg; Altman, Micah; Benoit, Kenneth; Gay, Claudine; Lewis, Jeffrey B.; Mayer, Russ; and Reinhardt, Eric, 2007, \"Record of American Democracy, All Key Data Files\", hdl:1902.1/01955, Harvard Dataverse, V2"
+  }
+}
