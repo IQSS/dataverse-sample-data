@@ -1,0 +1,209 @@
+{
+  "id": 3464252,
+  "identifier": "DVN/X27DSE",
+  "persistentUrl": "https://doi.org/10.7910/DVN/X27DSE",
+  "protocol": "doi",
+  "authority": "10.7910",
+  "publisher": "Harvard Dataverse",
+  "publicationDate": "2019-07-11",
+  "storageIdentifier": "s3://10.7910/DVN/X27DSE",
+  "datasetVersion": {
+    "id": 163562,
+    "storageIdentifier": "s3://10.7910/DVN/X27DSE",
+    "versionNumber": 1,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "productionDate": "Production Date",
+    "UNF": "UNF:6:pE4SFkzhKvY+PwYHdhT3sg==",
+    "lastUpdateTime": "2019-07-11T14:58:52Z",
+    "releaseTime": "2019-07-11T14:58:52Z",
+    "createTime": "2019-07-04T18:48:01Z",
+    "license": "CC0",
+    "termsOfUse": "CC0 Waiver",
+    "fileAccessRequest": false,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Text data for comparing the language used in Wikipedia, the DiabeticConnect Forum, and Research Articles"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Didegah"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of British Columbia"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Ghaseminik, Zahra"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Scientometrics & Technological Investigation Research Group"
+                },
+                "authorIdentifierScheme": {
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "ORCID"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Alperin, Juan Pablo"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Simon Fraser University"
+                },
+                "authorIdentifierScheme": {
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "ORCID"
+                },
+                "authorIdentifier": {
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "http://orcid.org/0000-0002-9344-7439"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Alperin, Juan Pablo"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Simon Fraser University"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "juan@alperin.ca"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "This dataset contains the text data analyzed in research comparing the language used in a Diabetes-related online Forum with that of Wikipedia and Research articles about Diabetes. The dataset contains 3 files: one for each of the three sources. Details of the data collection methods and filters applied can be found in the related publication."
+                },
+                "dsDescriptionDate": {
+                  "typeName": "dsDescriptionDate",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2019-07-04"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Computer and Information Science",
+              "Medicine, Health and Life Sciences",
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "publication",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Didegah, F., Ghaseminik, Z., & Alperin, J. P. (2018). Using a diabetes discussion forum and Wikipedia to detect the alignment of public interests and the research literature. BioRxiv, 496927. https://doi.org/10/gfsck6"
+                },
+                "publicationIDType": {
+                  "typeName": "publicationIDType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "doi"
+                },
+                "publicationIDNumber": {
+                  "typeName": "publicationIDNumber",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://doi.org/10.1101/496927"
+                },
+                "publicationURL": {
+                  "typeName": "publicationURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://www.biorxiv.org/content/10.1101/496927v1.full"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Alperin, Juan Pablo"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2019-07-04"
+          }
+        ]
+      }
+    },
+    "citation": "Didegah; Ghaseminik, Zahra; Alperin, Juan Pablo, 2019, \"Text data for comparing the language used in Wikipedia, the DiabeticConnect Forum, and Research Articles\", https://doi.org/10.7910/DVN/X27DSE, Harvard Dataverse, V1, UNF:6:pE4SFkzhKvY+PwYHdhT3sg== [fileUNF]"
+  }
+}

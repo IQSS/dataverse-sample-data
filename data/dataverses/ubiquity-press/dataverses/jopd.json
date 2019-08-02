@@ -1,5 +1,5 @@
 {
-  "name": "Journal of Open Psychology Data (JOPD)",
+  "name": "Journal of Open Psychology Data (JOPD) Dataverse",
   "alias": "jopd",
   "dataverseContacts": [
     {
@@ -7,6 +7,6 @@
     }
   ],
   "affiliation": "Ubiquity Press",
-  "description": "Datasets from data papers published in the Journal of Open Psychology Data (JOPD) . ",
+  "description": "Datasets from data papers published in the Journal of Open Psychology Data (JOPD).",
   "dataverseType": "JOURNALS"
 }

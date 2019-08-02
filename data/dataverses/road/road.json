@@ -1,5 +1,5 @@
 {
-  "name": "Record of American Democracy",
+  "name": "Record of American Democracy Dataverse",
   "alias": "road",
   "dataverseContacts": [
     {
@@ -7,9 +7,6 @@
     }
   ],
   "affiliation": "Harvard University",
-  "description": "Our Record Of American Democracy (ROAD) data include election returns, socioeconomic summaries, and demographic measures of the American public at unusually low levels of geographic aggregation. 
-<br>
-<br> For more information, please see our 
-<a href="http://road.hmdc.harvard.edu" rel="nofollow" target="_blank">ROAD project site</a>.",
+  "description": "Our Record Of American Democracy (ROAD) data include election returns, socioeconomic summaries, and demographic measures of the American public at unusually low levels of geographic aggregation.<br><br> For more information, please see our <a href=\"http://road.hmdc.harvard.edu\" rel=\"nofollow\" target=\"_blank\">ROAD project site<\/a>.",
   "dataverseType": "JOURNALS"
 }
