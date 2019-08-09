@@ -1,0 +1,12 @@
+{
+  "name": "ScholCommLab's Dataverse",
+  "alias": "scholcommlab",
+  "dataverseContacts": [
+    {
+      "contactEmail": "scholcommlab@mailinator.com"
+    }
+  ],
+  "affiliation": "Simon Fraser University",
+  "description": "This dataverse houses data related to projects associated with the Scholarly Communications Lab (ScholCommLab) at Simon Fraser University and the University of Ottawa. Find more at <a href=\"https://scholcommlab.ca\" rel=\"nofollow\" target=\"_blank\">scholcommlab.ca<\/a>",
+  "dataverseType": "RESEARCH_GROUP"
+}

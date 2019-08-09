@@ -14,6 +14,8 @@ sample_data = [
 'data/dataverses/HCPDS/datasets/reproductive-health-laws-around-the-world/reproductive-health-laws-around-the-world.json',
 'data/dataverses/cms/cms.json',
 'data/dataverses/cms/datasets/cmssampledata/cmssampledata.json',
+'data/dataverses/scholcommlab/scholcommlab.json',
+'data/dataverses/scholcommlab/datasets/diabeticconnect/diabeticconnect.json',
 'data/dataverses/king/king.json',
 'data/dataverses/king/datasets/cause-of-death/cause-of-death.json',
 ]
