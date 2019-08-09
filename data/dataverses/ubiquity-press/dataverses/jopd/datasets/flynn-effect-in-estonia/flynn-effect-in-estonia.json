@@ -1,0 +1,162 @@
+{
+   "datasetVersion":{
+      "id":76232,
+      "versionNumber":2,
+      "versionMinorNumber":0,
+      "versionState":"RELEASED",
+      "distributionDate":"2014",
+      "productionDate":"Production Date",
+      "lastUpdateTime":"2015-08-17T08:27:43Z",
+      "releaseTime":"2015-08-17T08:27:43Z",
+      "createTime":"2015-08-12T07:59:03Z",
+      "license":"NONE",
+      "termsOfUse":"All data uploaded to this Dataverse are licensed under the CC0 licence. Please follow this link for further information: http://creativecommons.org/publicdomain/zero/1.0/",
+      "metadataBlocks":{
+         "citation":{
+            "displayName":"Citation Metadata",
+            "fields":[
+               {
+                  "typeName":"title",
+                  "multiple":false,
+                  "typeClass":"primitive",
+                  "value":"“Changes in test-taking patterns over time” concerning the Flynn Effect in Estonia"
+               },
+               {
+                  "typeName":"author",
+                  "multiple":true,
+                  "typeClass":"compound",
+                  "value":[
+                     {
+                        "authorName":{
+                           "typeName":"authorName",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"Must, Olev"
+                        },
+                        "authorAffiliation":{
+                           "typeName":"authorAffiliation",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"Department of Psychology, University of Tartu, Estonia"
+                        }
+                     },
+                     {
+                        "authorName":{
+                           "typeName":"authorName",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"Must, Aasa"
+                        },
+                        "authorAffiliation":{
+                           "typeName":"authorAffiliation",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"Estonian National Defence College, Estonia"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "typeName":"datasetContact",
+                  "multiple":true,
+                  "typeClass":"compound",
+                  "value":[
+                     {
+                        "datasetContactEmail":{
+                           "typeName":"datasetContactEmail",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"jopd@mailinator.com"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "typeName":"dsDescription",
+                  "multiple":true,
+                  "typeClass":"compound",
+                  "value":[
+                     {
+                        "dsDescriptionValue":{
+                           "typeName":"dsDescriptionValue",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"The dataset from our previous Intelligence paper consists of data collected with the National Intelligence Tests (NIT, Estonian adaptation) in two historical time points: in 1934/36 (N=890) and 2006 (N=913) for students with an average age of 13. The data-file consists of information about cohort, age, and gender and test results at the item level for nine of the ten NIT subtests and subtest scores for the 10th subtest. Three answer types are separated: right answer, wrong answer and missing answer.  Data can be used for psychometric research of cohort and sex differences at the scale and item level."
+                        }
+                     }
+                  ]
+               },
+               {
+                  "typeName":"subject",
+                  "multiple":true,
+                  "typeClass":"controlledVocabulary",
+                  "value":[
+                     "Social Sciences"
+                  ]
+               },
+               {
+                  "typeName":"publication",
+                  "multiple":true,
+                  "typeClass":"compound",
+                  "value":[
+                     {
+                        "publicationCitation":{
+                           "typeName":"publicationCitation",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"This data has been described in the following data paper: Must, O. & Must, A., (2014). Data from “Changes in test-taking patterns over time” concerning the Flynn Effect in Estonia. Journal of Open Psychology Data. 2(1), p.e2. DOI: http://doi.org/10.5334/jopd.ab"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "typeName":"productionDate",
+                  "multiple":false,
+                  "typeClass":"primitive",
+                  "value":"2006"
+               },
+               {
+                  "typeName":"distributor",
+                  "multiple":true,
+                  "typeClass":"compound",
+                  "value":[
+                     {
+                        "distributorName":{
+                           "typeName":"distributorName",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"Harvard Dataverse Network"
+                        },
+                        "distributorURL":{
+                           "typeName":"distributorURL",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"http://thedata.harvard.edu/dvn/"
+                        },
+                        "distributorLogoURL":{
+                           "typeName":"distributorLogoURL",
+                           "multiple":false,
+                           "typeClass":"primitive",
+                           "value":"http://thedata.harvard.edu/dvn/resources/images/dvnPoweredByLogo.gif"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "typeName":"distributionDate",
+                  "multiple":false,
+                  "typeClass":"primitive",
+                  "value":"2014"
+               },
+               {
+                  "typeName":"dateOfDeposit",
+                  "multiple":false,
+                  "typeClass":"primitive",
+                  "value":"2013-12-09"
+               }
+            ]
+         }
+      },
+      "citation":"Must, Olev; Must, Aasa, 2014, \"“Changes in test-taking patterns over time” concerning the Flynn Effect in Estonia\", doi:10.7910/DVN/23791, Harvard Dataverse, V2"
+   }
+}

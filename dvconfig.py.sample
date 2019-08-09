@@ -16,6 +16,10 @@ sample_data = [
 'data/dataverses/cms/datasets/cmssampledata/cmssampledata.json',
 'data/dataverses/scholcommlab/scholcommlab.json',
 'data/dataverses/scholcommlab/datasets/diabeticconnect/diabeticconnect.json',
+'data/dataverses/ubiquity-press/ubiquity-press.json',
+'data/dataverses/ubiquity-press/dataverses/jopd/jopd.json',
+'data/dataverses/ubiquity-press/dataverses/jopd/datasets/flynn-effect-in-estonia/flynn-effect-in-estonia.json',
+'data/dataverses/ubiquity-press/dataverses/jopd/datasets/bafacalo/bafacalo.json',
 'data/dataverses/king/king.json',
 'data/dataverses/king/datasets/cause-of-death/cause-of-death.json',
 ]

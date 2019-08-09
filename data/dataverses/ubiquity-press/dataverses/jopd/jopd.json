@@ -1,0 +1,12 @@
+{
+  "name": "Journal of Open Psychology Data (JOPD) Dataverse",
+  "alias": "jopd",
+  "dataverseContacts": [
+    {
+      "contactEmail": "jopd@mailinator.com"
+    }
+  ],
+  "affiliation": "Ubiquity Press",
+  "description": "Datasets from data papers published in the Journal of Open Psychology Data (JOPD).",
+  "dataverseType": "JOURNALS"
+}
