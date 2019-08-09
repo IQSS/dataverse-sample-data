@@ -12,4 +12,6 @@ sample_data = [
 'data/dataverses/manchester/datasets/test-dataset/test-dataset.json',
 'data/dataverses/HCPDS/HCPDS.json',
 'data/dataverses/HCPDS/datasets/reproductive-health-laws-around-the-world/reproductive-health-laws-around-the-world.json',
+'data/dataverses/king/king.json',
+'data/dataverses/king/datasets/cause-of-death/cause-of-death.json',
 ]
