@@ -88,7 +88,7 @@
                            "typeName":"dsDescriptionValue",
                            "multiple":false,
                            "typeClass":"primitive",
-                           "value":"For more info about these files see \r\n\r\nhttps://www.cms.gov/Research-Statistics-Data-and-Systems/Downloadable-Public-Use-Files/SynPUFs/DESample01.html"
+                           "value":"For more info about these files see \r\n\r\n<a href=\"https://www.cms.gov/Research-Statistics-Data-and-Systems/Downloadable-Public-Use-Files/SynPUFs/DESample01.html\">https://www.cms.gov/Research-Statistics-Data-and-Systems/Downloadable-Public-Use-Files/SynPUFs/DESample01.html</a>"
                         }
                      }
                   ]
