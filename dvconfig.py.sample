@@ -1,4 +1,4 @@
-base_url = 'https://demo.dataverse.org'
+base_url = 'http://localhost:8080'
 api_token = ''
 # sample data will be created in the following order
 sample_data = [
