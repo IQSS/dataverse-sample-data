@@ -1,0 +1,12 @@
+{
+  "name": "CMS Dataverse",
+  "alias": "CMS",
+  "dataverseContacts": [
+    {
+      "displayOrder": 0,
+      "contactEmail": "support@dataverse.org"
+    }
+  ],
+  "affiliation": "CMS",
+  "dataverseType": "ORGANIZATIONS_INSTITUTIONS"
+}
