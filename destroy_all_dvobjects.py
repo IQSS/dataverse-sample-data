@@ -1,6 +1,7 @@
 from pyDataverse.api import Api
 import json
 import dvconfig
+import requests
 base_url = dvconfig.base_url
 api_token = dvconfig.api_token
 api = Api(base_url, api_token)
@@ -15,8 +16,9 @@ def main():
     dataset_ids.sort(reverse=True)
     for dataset_id in dataset_ids:
         print('Deleting dataset id ' + str(dataset_id))
-        # If you can't delete a dataset due to a lock, try this:
-        # curl -H "X-Dataverse-key: $ADMIN_API_TOKEN" -X DELETE "$SERVER_URL/api/datasets/$ID/locks"
+        print('Preemptively deleting dataset locks for dataset id ' + str(dataset_id))
+        resp = requests.delete(base_url + '/api/datasets/' + str(dataset_id) + '/locks?key=' + api_token)
+        print(resp)
         resp = api.delete_dataset(dataset_id, is_pid=False)
         print(resp)
     dataverse_ids.sort(reverse=True)
