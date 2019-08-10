@@ -37,6 +37,13 @@ Assuming you have already run the `source` and `cd` commands above, you should b
 
     python create_sample_data.py
 
+All of the steps above can be automated on an fresh installation of Dataverse on an EC2 instance on AWS by downloading [ec2-create-instance.sh][] and [ec2config.yaml][] and executing the script with the config file like this:
+
+    chmod 755 ec2-create-instance.sh
+    ./ec2-create-instance.sh -g ec2config.yaml
+
+For more information on spinning up Dataverse on AWS (especially if you don't have the `aws` executable installed), see http://guides.dataverse.org/en/latest/developers/deployment.html
+
 ## Known issues
 
 - Because of how file hierarchy support was implemented (using the [Updating File Metadata][] API endpoint), multiple files with the same name are not supported. The following error is expected: "This file already exists in the dataset."
@@ -45,6 +52,8 @@ Assuming you have already run the `source` and `cd` commands above, you should b
 
 We love contributors! Please see our [Contributing Guide][] for ways you can help.
 
+[ec2-create-instance.sh]: https://github.com/IQSS/dataverse-ansible/blob/master/ec2/ec2-create-instance.sh
+[ec2config.yaml]: ec2config.yaml
 [Updating File Metadata]: http://guides.dataverse.org/en/4.15/api/native-api.html#updating-file-metadata
 [Contributing Guide]: CONTRIBUTING.md
 [pyDataverse]: https://pypi.org/project/pyDataverse/
