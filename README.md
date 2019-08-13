@@ -29,7 +29,10 @@ Install dependencies into the virtual environment, especially [pyDataverse][].
 
     pip install -r requirements.txt
 
-Copy `dvconfig.py.sample` to `dvconfig.py` and add your API token. Note that the config file specifies which sample data will be created.
+Copy `dvconfig.py.sample` to `dvconfig.py` (see the `cp` command below) and add your API token (using your favorite text editor, which may not be `vi` as shown below). Note that the config file specifies which sample data will be created.
+
+    cp dvconfig.py.sample dvconfig.py
+    vi dvconfig.py
 
 ## Adding sample data
 
