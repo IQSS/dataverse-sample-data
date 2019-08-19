@@ -28,7 +28,7 @@
             "typeName": "title",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "Test Dataset with Shapefiles, Images, and Tabular Files"
+            "value": "Dataset with Shapefiles, Images, and Tabular Files"
           },
           {
             "typeName": "author",
