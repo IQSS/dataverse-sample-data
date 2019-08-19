@@ -26,7 +26,7 @@
             "typeName": "title",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "FITS files and subsetted data files"
+            "value": "10+ FITS files and subsetted data files"
           },
           {
             "typeName": "author",
