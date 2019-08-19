@@ -26,7 +26,7 @@
             "typeName": "title",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "This is my test dataset"
+            "value": "FITS files and subsetted data files"
           },
           {
             "typeName": "author",
