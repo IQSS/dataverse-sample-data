@@ -45,8 +45,6 @@ dataverse:
     upload_to_hub: False
     user: counter
     year_month: "2018-05"
-  dataexplorer:
-    enabled: true
   db:
     name: dvndb
     host: localhost
@@ -110,6 +108,8 @@ dataverse:
   usermgmtkey: burrito
   version: 4.15.1
   wholetale:
+    enabled: true
+  dataexplorer:
     enabled: true
 
 munin:
