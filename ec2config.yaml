@@ -112,6 +112,7 @@ dataverse:
   wholetale:
     enabled: true
 
+
 munin:
   install: false
   admin:
