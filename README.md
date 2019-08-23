@@ -42,6 +42,7 @@ Assuming you have already run the `source` and `cd` commands above, you should b
 
 All of the steps above can be automated on an fresh installation of Dataverse on an EC2 instance on AWS by downloading [ec2-create-instance.sh][] and [ec2config.yaml][] and executing the script with the config file like this:
 
+    curl -O https://raw.githubusercontent.com/IQSS/dataverse-ansible/master/ec2/ec2-create-instance.sh
     chmod 755 ec2-create-instance.sh
     ./ec2-create-instance.sh -g ec2config.yaml
 
