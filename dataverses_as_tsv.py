@@ -9,6 +9,7 @@ api = Api(base_url, api_token)
 
 root_dataverse_database_id = 1
 dataverse_ids = []
+direct_children_by_dataverse_ids = {}
 tsv_file = 'dataverses.tsv'
 
 def main():
@@ -35,9 +36,18 @@ def main():
         mydict['affiliation'] = affiliation
         mydict['contact1'] = contact1['contactEmail']
         mydict['category'] = category
-        mydict['creationdate'] = creationdate
+        mydict['creation_date'] = creationdate
         mydict['url'] = base_url + "/dataverse/" + alias
-        mydict['parenturl'] = base_url + "/dataverse.xhtml?id=" + str(ownerid)
+        resp = requests.get(base_url + '/api/search?q=entityId:' + str(dvid))
+        results = resp.json()
+        items = results['data']['items']
+        if items:
+            # Only published dataverses are searchable.
+            mydict['publication_date'] = results['data']['items'][0]['published_at']
+        else:
+            # Unpublished dataverses can't be searched.
+            mydict['publication_date'] = 'UNPUBLISHED'
+        mydict['direct_children'] = direct_children_by_dataverse_ids[dvid]
         myarray.append(mydict)
 
     keys = myarray[0].keys()
@@ -52,6 +62,7 @@ def find_children(dataverse_database_id):
     query_str = '/dataverses/' + str(dataverse_database_id) + '/contents'
     params = {}
     resp = api.get_request(query_str, params=params, auth=True)
+    direct_children_by_dataverse_ids[dataverse_database_id] = len(resp.json()['data'])
     for dvobject in resp.json()['data']:
         dvtype = dvobject['type']
         dvid = dvobject['id']
