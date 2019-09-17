@@ -84,8 +84,9 @@ for path in paths:
                 }
                 resp = requests.post(base_url + '/api/files/' + str(file_id) + '/metadata', data=data, headers=headers, stream=True, files=buff)
                 print(resp)
+                time.sleep(2)
         # Sleep a little more to avoid org.postgresql.util.PSQLException: ERROR: deadlock detected
-        time.sleep(2)
+        time.sleep(10)
         print('Publishing dataset id ' + str(dataset_dbid))
         # TODO: Switch to pyDataverse api.publish_dataset after this issue is fixed: https://github.com/AUSSDA/pyDataverse/issues/24
         resp = requests.post(base_url + '/api/datasets/' + str(dataset_dbid) + '/actions/:publish?type=major&key=' + api_token)
