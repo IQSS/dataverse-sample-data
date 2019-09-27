@@ -42,13 +42,15 @@ for path in paths:
     if 'data' == parent:
         parent = ':root'
     if ('dataverse' == dvtype):
+        pass
         #print('Creating ' + dvtype + ' ' + json_file + ' in dataverse ' + parent)
-        dv_json = path
-        with open(dv_json) as f:
-            metadata = json.load(f)
+        ##dv_json = path
+        ##with open(dv_json) as f:
+        ##    #metadata = json.load(f)
+        ##    dvmetadata = json.load(f)
         #print(metadata)
         # FIXME: Why is "identifier" required?
-        identifier = metadata['alias']
+        #####identifier = metadata['alias']
         #resp = api.create_dataverse(identifier, json.dumps(metadata), parent=parent)
         #print(resp)
         #resp = api.publish_dataverse(identifier)
@@ -69,9 +71,65 @@ for path in paths:
            for name in files:
 #                print('name', name)
                 datarow = []
+                #datarow.append(name[:20])
                 datarow.append(name)
-                datarow.append('FIXME')
+                #title = metadata['datasetVersion']['metadataBlocks']
+                title = metadata['datasetVersion']['metadataBlocks']['citation']['fields'][0]['value']
+                #print(title)
+                subjects = metadata['datasetVersion']['metadataBlocks']['citation']['fields'][4]['value']
+                if title == 'Reproductive Health Laws Around the World':
+                    subjects = metadata['datasetVersion']['metadataBlocks']['citation']['fields'][5]['value']
+                #datarow.append('FIXME')
+                datarow.append(title)
                 filepath = os.path.join(path,name)
+                parts = filepath.split('/dataverses/')
+                #datarow.append(parts)
+                #alias1 = filepath[3]
+                #alias1 = filepath.split('/')[2]
+                alias1 = None
+                name1 = None
+                #dvname = dvmetadata['name']
+                #name1 = 'FIXMENAME1'
+                try:
+                    alias1 = parts[1].split('/')[0]
+                    dv_json = 'data/dataverses/' + alias1 + '/' + alias1 + '.json'
+                    with open(dv_json) as f:
+                        alias1md = json.load(f)
+                    name1 = alias1md['name']
+                except:
+                    pass
+                #alias1 = 'FIXMEALIAS1'
+                datarow.append(alias1)
+                datarow.append(name1)
+                #alias2 = filepath.split('/')[4]
+                alias2 = None
+                name2 = None
+                try:
+                    alias2 = parts[2].split('/')[0]
+                    dv_json = 'data/dataverses/' + alias1 + '/dataverses/' + alias2 + '/' + alias2 + '.json'
+                    with open(dv_json) as f:
+                        alias2md = json.load(f)
+                    name2 = alias2md['name']
+                except:
+                    pass
+                datarow.append(alias2)
+                datarow.append(name2)
+                #alias3 = filepath.split('/')[7]
+                alias3 = None
+                name3 = None
+                try:
+                    alias3 = parts[3].split('/')[0]
+                    dv_json = 'data/dataverses/' + alias1 + '/dataverses/' + alias2 + '/dataverses/' + alias3 + '/' + alias3 + '.json'
+                    with open(dv_json) as f:
+                        alias2md = json.load(f)
+                    name2 = alias2md['name']
+                except:
+                    pass
+                datarow.append(alias3)
+                datarow.append(name3)
+                #print(subjects)
+                datarow.append(';'.join(subjects))
+                #datarow.append(filepath)
                 relpath = os.path.relpath(filepath,files_dir)
                 # "directoryLabel" is used to populate "File Path"
                 directoryLabel, filename = os.path.split(relpath)
@@ -90,10 +148,13 @@ for path in paths:
                 headers = {
                     'X-Dataverse-key': api_token,
                 }
+                publication_date = '2019-09-27'
+                datarow.append(publication_date)
                 alldata.append(datarow)
                 
 
 for i in alldata:
+    print
     print(i)
 outfile = open('./files.tsv','w')
 writer=csv.writer(outfile, delimiter='\t')
