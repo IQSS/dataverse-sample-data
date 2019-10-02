@@ -12,18 +12,17 @@ Clone this repo.
 
     git clone https://github.com/IQSS/dataverse-sample-data.git
 
-Create a virtual environment for this project.
-
-    mkdir ~/envs
-    python3 -m venv ~/envs/dataverse-sample-data
-
-Activate the virtual environment you just created.
-
-    source ~/envs/dataverse-sample-data/bin/activate
-
 Change directories into the repo that you cloned.
 
     cd dataverse-sample-data
+
+Create a virtual environment for this project.
+
+    python3 -m venv venv
+
+Activate the virtual environment you just created.
+
+    source venv/bin/activate
 
 Install dependencies into the virtual environment, especially [pyDataverse][].
 
