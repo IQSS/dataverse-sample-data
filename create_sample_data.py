@@ -60,6 +60,7 @@ for path in paths:
         dataset_pid = resp.json()['data']['persistentId']
         dataset_dbid = resp.json()['data']['id']
         files_dir = path.replace(json_file, '') + 'files'
+        filemetadata_dir = path.replace(json_file, '') + '.filemetadata'
         print(files_dir)
         for path,subdir,files in os.walk(files_dir):
            for name in files:
@@ -73,9 +74,19 @@ for path in paths:
                 ## This lock check and sleep is here to prevent the dataset from being permanently
                 ## locked because a tabular file was uploaded first.
                 check_dataset_lock(dataset_dbid)
-                file_metadata = {}
                 # TODO: Think more about where the description comes from. A "sidecar" file as proposed at https://github.com/IQSS/dataverse/issues/5924#issuecomment-499605672 ?
-                #file_metadata['description'] = 'Sidecar?'
+                # L.A.: I implemented something along these lines - an (optional) directory called ".filemetadata" 
+                # in the dataset directory, where files containing extra json filemetadata records may be 
+                # placed for each of the files in the "files" directory. 
+                # (since the file names must be unique per dataset, even with folders, the .filemetadata 
+                # directory structure is flat)
+                # check for optional filemetadata file:
+                filemetadatapath = os.path.join(filemetadata_dir, filename);
+                if (os.path.exists(filemetadatapath)):
+                    with open(filemetadatapath) as m:
+                        file_metadata = json.load(m)
+                else:
+                    file_metadata = {}
                 file_metadata['directoryLabel'] = directoryLabel
                 jsonData = json.dumps(file_metadata)
                 data = { 'jsonData' : jsonData }
