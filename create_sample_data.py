@@ -95,6 +95,12 @@ for path in paths:
                 }
                 resp = requests.post(base_url + '/api/files/' + str(file_id) + '/metadata', data=data, headers=headers, stream=True, files=buff)
                 print(resp)
+                # and finally, restrict the file if requested (in the same optional file metadata file, above):
+                if 'restricted' in file_metadata.keys():
+                    if (file_metadata['restricted']):
+                        headers['Content-Type'] = 'application/octet-stream'
+                        resp = requests.put(base_url + '/api/files/' + str(file_id) + '/restrict', data='true', headers=headers)
+                        print(resp)
         # Sleep a little more to avoid org.postgresql.util.PSQLException: ERROR: deadlock detected
         time.sleep(2)
         print('Publishing dataset id ' + str(dataset_dbid))
