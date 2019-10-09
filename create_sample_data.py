@@ -81,7 +81,7 @@ for path in paths:
                 # (since the file names must be unique per dataset, even with folders, the .filemetadata 
                 # directory structure is flat)
                 # check for optional filemetadata file:
-                filemetadatapath = os.path.join(filemetadata_dir, filename);
+                filemetadatapath = os.path.join(filemetadata_dir, relpath);
                 if (os.path.exists(filemetadatapath)):
                     with open(filemetadatapath) as m:
                         file_metadata = json.load(m)

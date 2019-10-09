@@ -3,6 +3,7 @@
    "restricted": true,
    "categories":
       [
-         "Documentation"
+         "tagDocumentation",
+	 "tagRestricted"
       ]
 }
