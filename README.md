@@ -53,6 +53,5 @@ We love contributors! Please see our [Contributing Guide][] for ways you can hel
 
 [ec2-create-instance.sh]: https://github.com/IQSS/dataverse-ansible/blob/master/ec2/ec2-create-instance.sh
 [ec2config.yaml]: ec2config.yaml
-[Updating File Metadata]: http://guides.dataverse.org/en/4.15/api/native-api.html#updating-file-metadata
 [Contributing Guide]: CONTRIBUTING.md
 [pyDataverse]: https://pypi.org/project/pyDataverse/
