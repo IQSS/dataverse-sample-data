@@ -47,10 +47,6 @@ All of the steps above can be automated on an fresh installation of Dataverse on
 
 For more information on spinning up Dataverse on AWS (especially if you don't have the `aws` executable installed), see http://guides.dataverse.org/en/latest/developers/deployment.html
 
-## Known issues
-
-- Because of how file hierarchy support was implemented (using the [Updating File Metadata][] API endpoint), multiple files with the same name are not supported. The following error is expected: "This file already exists in the dataset."
-
 ## Contributing
 
 We love contributors! Please see our [Contributing Guide][] for ways you can help.
