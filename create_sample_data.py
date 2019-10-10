@@ -78,8 +78,6 @@ for path in paths:
                 # L.A.: I implemented something along these lines - an (optional) directory called ".filemetadata" 
                 # in the dataset directory, where files containing extra json filemetadata records may be 
                 # placed for each of the files in the "files" directory. 
-                # (since the file names must be unique per dataset, even with folders, the .filemetadata 
-                # directory structure is flat)
                 # check for optional filemetadata file:
                 filemetadatapath = os.path.join(filemetadata_dir, relpath);
                 if (os.path.exists(filemetadatapath)):
