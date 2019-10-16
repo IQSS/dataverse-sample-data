@@ -1,0 +1,8 @@
+{
+   "description": "This tabular file contains the summary counts of programming languages used in the surveyed projects.",
+   "categories":
+      [
+         "tagData", 
+	 "tagResults"
+      ]
+}
