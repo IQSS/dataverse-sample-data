@@ -19,7 +19,7 @@ def main():
         print('Preemptively deleting dataset locks for dataset id ' + str(dataset_id))
         resp = requests.delete(base_url + '/api/datasets/' + str(dataset_id) + '/locks?key=' + api_token)
         print(resp)
-        resp = api.delete_dataset(dataset_id, is_pid=False)
+        resp = requests.delete(base_url + '/api/datasets/' + str(dataset_id) + '/destroy?key=' + api_token)
         print(resp)
     dataverse_ids.sort(reverse=True)
     for dataverse_id in dataverse_ids:
