@@ -14,8 +14,9 @@ subjects
 publication_date
 '''
 data = defaultdict(dict)
-#data['name'] = 'root'
-#data['children'] = []
+final = {}
+final['name'] = 'root'
+final['children'] = []
 seen = defaultdict(dict)
 with open('files.tsv', newline='') as tsvfile:
     reader = csv.DictReader(tsvfile, delimiter="\t")
@@ -52,5 +53,32 @@ with open('files.tsv', newline='') as tsvfile:
             else:
                 data[dv1name][title] = 1
                 seen[dv1name + title] = 1
-out = json.dumps(data, indent=2)
-print(out)
+data_out = json.dumps(data, indent=2)
+#print(data_out)
+#for child_of_root in data:
+# for key, value in ourNewDict.items():
+
+# cor is "child of root"
+for corkey, corval in data.items():
+    #print(corkey)
+    level1 = {}
+    level1['name'] = corkey
+    # gcor = "grandchild of root"
+    for gcorkey, gcorval in corval.items():
+        # ggcor = "great grandchild of root"
+        if isinstance(gcorval,dict):
+        #if gcorval.items():
+            for ggcorkey, ggcorval in gcorval.items():
+                #print('ggcorkey:', ggcorkey)
+                level3 = {}
+                level3['name'] = gcorkey
+                level2['children'] = []
+                level2['children'].append(level3)
+        #print(gcorkey)
+        level2 = {}
+        level2['name'] = gcorkey
+        level1['children'] = []
+        level1['children'].append(level2)
+    final['children'].append(level1)
+final_out = json.dumps(final, indent=2)
+print(final_out)
