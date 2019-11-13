@@ -28,7 +28,13 @@ with open('files.tsv', newline='') as tsvfile:
         title = row['dataset_name']
         #print("%-20s > %-20s > %-20s > %-20s > %-20s" % (dv1name[:20], dv2name[:20], dv3name[:20], title[:20], filename[:20]))
         if dv3name:
-            pass
+            if seen[dv1name + dv2name + dv3name + title]:
+                data[dv1name][dv2name][dv3name][title] += 1
+            else:
+                if not data[dv1name].get(dv2name).get(dv3name):
+                    data[dv1name][dv2name][dv3name] = {}
+                data[dv1name][dv2name][dv3name][title] = 1
+                seen[dv1name + dv2name + dv3name + title] = 1
         elif dv2name:
             if seen[dv1name + dv2name + title]:
                 data[dv1name][dv2name][title] += 1
