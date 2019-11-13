@@ -1,0 +1,12 @@
+{
+  "name": "Dataverse Installations",
+  "alias": "dataverse-installations",
+  "dataverseContacts": [
+    {
+      "contactEmail": "philip_durbin@harvard.edu"
+    }
+  ],
+  "affiliation": "Harvard University",
+  "description": "Installations of Dataverse around the world: <a href=\"https://github.com/IQSS/dataverse-installations\">https://github.com/IQSS/dataverse-installations</a>",
+  "dataverseType": "RESEARCH_PROJECTS"
+}
