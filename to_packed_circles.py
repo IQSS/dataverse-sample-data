@@ -31,8 +31,11 @@ with open('files.tsv', newline='') as tsvfile:
             if seen[dv1name + dv2name + dv3name + title]:
                 data[dv1name][dv2name][dv3name][title] += 1
             else:
+                if not data[dv1name].get(dv2name):
+                    data[dv1name][dv2name] = {}
                 if not data[dv1name].get(dv2name).get(dv3name):
                     data[dv1name][dv2name][dv3name] = {}
+                data[dv1name][dv2name][dv3name] = {}
                 data[dv1name][dv2name][dv3name][title] = 1
                 seen[dv1name + dv2name + dv3name + title] = 1
         elif dv2name:
