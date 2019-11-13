@@ -69,8 +69,8 @@ for path in paths:
                     alias3 = parts[3].split('/')[0]
                     dv_json = 'data/dataverses/' + alias1 + '/dataverses/' + alias2 + '/dataverses/' + alias3 + '/' + alias3 + '.json'
                     with open(dv_json) as f:
-                        alias2md = json.load(f)
-                    name2 = alias2md['name']
+                        alias3md = json.load(f)
+                    name3 = alias3md['name']
                 except:
                     pass
                 datarow.append(alias3)
