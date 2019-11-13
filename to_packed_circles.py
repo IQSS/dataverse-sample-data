@@ -1,5 +1,6 @@
 import csv
 import json
+from collections import defaultdict
 '''
 filename
 dataset_name
@@ -12,9 +13,10 @@ dataverse_level_3_friendly
 subjects
 publication_date
 '''
-data = {}
-data['name'] = 'root'
-data['children'] = []
+data = defaultdict(dict)
+#data['name'] = 'root'
+#data['children'] = []
+seen = defaultdict(dict)
 with open('files.tsv', newline='') as tsvfile:
     reader = csv.DictReader(tsvfile, delimiter="\t")
     rows = [row for row in reader]
@@ -24,5 +26,22 @@ with open('files.tsv', newline='') as tsvfile:
         dv2name = row['dataverse_level_2_friendly']
         dv3name = row['dataverse_level_3_friendly']
         title = row['dataset_name']
+        #print("%-20s > %-20s > %-20s > %-20s > %-20s" % (dv1name[:20], dv2name[:20], dv3name[:20], title[:20], filename[:20]))
+        if dv3name:
+            pass
+        elif dv2name:
+            if seen[dv1name + dv2name + title]:
+                data[dv1name][dv2name][title] += 1
+            else:
+                if not data[dv1name].get(dv2name):
+                    data[dv1name][dv2name] = {}
+                data[dv1name][dv2name][title] = 1
+                seen[dv1name + dv2name + title] = 1
+        else:
+            if seen[dv1name + title]:
+                data[dv1name][title] += 1
+            else:
+                data[dv1name][title] = 1
+                seen[dv1name + title] = 1
 out = json.dumps(data, indent=2)
 print(out)
