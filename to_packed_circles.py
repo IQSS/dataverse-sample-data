@@ -28,6 +28,8 @@ with open('files.tsv', newline='') as tsvfile:
     reader = csv.DictReader(tsvfile, delimiter="\t")
     rows = [row for row in reader]
     for row in rows:
+        fileid = row['fileid']
+        #print(fileid)
         filename = row['filename']
         dv1name = row['dataverse_level_1_friendly_name']
         dv1id = row['dataverse_level_1_id']
@@ -35,6 +37,16 @@ with open('files.tsv', newline='') as tsvfile:
         dv2id = row['dataverse_level_2_id']
         dv3name = row['dataverse_level_3_friendly_name']
         dv3id = row['dataverse_level_3_id']
+        dv3alias = row['dataverse_level_3_alias']
+        #print(fileid, dv3alias)
+        if dv3alias == 'glw_3':
+            continue
+        if dv3alias == 'ABDAssessments_Malawi':
+            continue
+        if dv3alias == 'ABDAssessments_India':
+            continue
+        if dv3alias == 'ABDAssessments_Mali':
+            continue
         title = row['dataset_name']
         #print("%-20s > %-20s > %-20s > %-20s > %-20s" % (dv1name[:20], dv2name[:20], dv3name[:20], title[:20], filename[:20]))
         if dv3name:
