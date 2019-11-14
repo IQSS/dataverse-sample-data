@@ -79,19 +79,20 @@ for corkey, corval in data.items():
     for gcorkey, gcorval in corval.items():
         #print(gcorkey)
         # ggcor = "great grandchild of root"
-        #level2 = {}
-#        if isinstance(gcorval,dict):
+        level2 = {}
+        level2['children'] = []
+        if isinstance(gcorval,dict):
 #        #if gcorval.items():
-#            for ggcorkey, ggcorval in gcorval.items():
-#                #print('ggcorkey:', ggcorkey)
-#                level3 = {}
+            for ggcorkey, ggcorval in gcorval.items():
+                #print('ggcorkey:', ggcorkey)
+                level3 = {}
 #                #if isinstance(ggcorval,dict):
 #                #    for gggcorkey, gggcorval in ggcorval.items():
-#                level3['name'] = ggcorkey + '-level3'
-#                level2['children'] = []
-#                level2['children'].append(level3)
+                #level3['name'] = ggcorkey + '-level3'
+                level3['name'] = ggcorkey
+                level2['children'].append(level3)
         #print(gcorkey)
-        level2 = {}
+        #level2 = {}
         #level2['name'] = gcorkey + '-level2'
         level2['name'] = gcorkey
         #level1['children'] = []
