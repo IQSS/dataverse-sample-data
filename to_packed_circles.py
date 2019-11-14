@@ -86,8 +86,12 @@ for corkey, corval in data.items():
             for ggcorkey, ggcorval in gcorval.items():
                 #print('ggcorkey:', ggcorkey)
                 level3 = {}
-#                #if isinstance(ggcorval,dict):
-#                #    for gggcorkey, gggcorval in ggcorval.items():
+                level3['children'] = []
+                if isinstance(ggcorval,dict):
+                    for gggcorkey, gggcorval in ggcorval.items():
+                        level4 = {}
+                        level4['name'] = gggcorkey
+                        level3['children'].append(level4)
                 #level3['name'] = ggcorkey + '-level3'
                 level3['name'] = ggcorkey
                 level2['children'].append(level3)
