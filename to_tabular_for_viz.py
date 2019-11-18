@@ -8,6 +8,10 @@ base_url = dvconfig.base_url
 api_token = dvconfig.api_token
 paths = dvconfig.sample_data
 alldata = []
+file_id = 0
+dataverse_level_1_id = ""
+dataverse_level_2_id = ""
+dataverse_level_3_id = ""
 for path in paths:
     parts = path.split('/')
     json_file = parts[-1]
@@ -29,7 +33,9 @@ for path in paths:
         files_dir = path.replace(json_file, '') + 'files'
         for path,subdir,files in os.walk(files_dir):
            for name in files:
+                file_id +=1
                 datarow = []
+                datarow.append(file_id)
                 datarow.append(name)
                 title = metadata['datasetVersion']['metadataBlocks']['citation']['fields'][0]['value']
                 subjects = metadata['datasetVersion']['metadataBlocks']['citation']['fields'][4]['value']
@@ -49,6 +55,7 @@ for path in paths:
                     name1 = alias1md['name']
                 except:
                     pass
+                datarow.append(dataverse_level_1_id)
                 datarow.append(alias1)
                 datarow.append(name1)
                 alias2 = None
@@ -61,6 +68,7 @@ for path in paths:
                     name2 = alias2md['name']
                 except:
                     pass
+                datarow.append(dataverse_level_2_id)
                 datarow.append(alias2)
                 datarow.append(name2)
                 alias3 = None
@@ -73,11 +81,14 @@ for path in paths:
                     name3 = alias3md['name']
                 except:
                     pass
+                datarow.append(dataverse_level_3_id)
                 datarow.append(alias3)
                 datarow.append(name3)
                 datarow.append(';'.join(subjects))
                 # TODO: stop hard coding date
                 publication_date = '2019-09-27'
+                datarow.append(publication_date)
+                datarow.append(publication_date)
                 datarow.append(publication_date)
                 alldata.append(datarow)
                 
@@ -87,5 +98,22 @@ for i in alldata:
     print(i)
 outfile = open('./files.tsv','w')
 writer=csv.writer(outfile, delimiter='\t')
-writer.writerow(['filename', 'dataset_name', 'dataverse_level_1_alias', 'dataverse_level_1_friendly', 'dataverse_level_2_alias', 'dataverse_level_2_friendly', 'dataverse_level_3_alias', 'dataverse_level_3_friendly', 'subjects', 'publication_date'])
+writer.writerow([
+'fileid',
+'filename',
+'dataset_name',
+'dataverse_level_1_id',
+'dataverse_level_1_alias',
+'dataverse_level_1_friendly_name',
+'dataverse_level_2_id',
+'dataverse_level_2_alias',
+'dataverse_level_2_friendly_name',
+'dataverse_level_3_id',
+'dataverse_level_3_alias',
+'dataverse_level_3_friendly_name',
+'subjects',
+'file_creation_date',
+'file_publication_date',
+'publication_date'
+])
 writer.writerows(alldata)
