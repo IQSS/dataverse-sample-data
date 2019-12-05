@@ -47,6 +47,36 @@ All of the steps above can be automated on an fresh installation of Dataverse on
 
 For more information on spinning up Dataverse on AWS (especially if you don't have the `aws` executable installed), see http://guides.dataverse.org/en/latest/developers/deployment.html
 
+## Usage in automated processes without API key
+Sometimes you don't want to retrieve an API key manually, like at demo times
+or when you do automatic deployments of sample data.
+
+For these cases, a script `get_api_token.py` has been added for your convenience.
+
+You can use it like follows (just an example):
+```
+API_TOKEN=`python get_api_token.py` python create_sample_data.py
+```
+
+The script understands two additional environment variables (in addition to
+those from `dvconfig.py`):
+* `DATAVERSE_USER`
+    * Username of the user whos API token we want to retrieve
+    * Defaults to `dataverseAdmin`
+* `DATAVERSE_PASSWORD`
+    * either a cleartext password or a path to a file containing the clear text
+      password for the user.
+    * Defaults to `admin1` (usable for dataverse-ansible and dataverse-kubernetes)
+
+In case of a successfull retrieval, it will print the password to standard out.
+Error will be written to standard error, so you will see it at the top of
+a failed attempt to load the data.
+
+Please be aware that you will have to enable
+[:AllowApiTokenLookupViaApi](http://guides.dataverse.org/en/latest/installation/config.html#allowapitokenlookupviaapi)
+configuration option in your Dataverse to use this script. You can disable
+after deploying the data, no harm done.
+
 ## Contributing
 
 We love contributors! Please see our [Contributing Guide][] for ways you can help.
