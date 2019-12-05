@@ -1,6 +1,13 @@
 import os
 
-base_url = os.getenv('BASE_URL', 'http://localhost:8080')
+# Create the base_url from different parts (very usefull on K8s) or just
+# read completely from a single env var. Default to "http://localhost:8080"
+host = os.getenv('DATAVERSE_SERVICE_HOST', 'localhost')
+port = os.getenv('DATAVERSE_SERVICE_PORT_HTTP', '8080')
+proto = os.getenv('DATAVERSE_SERVICE_PORT_PROTO', 'http')
+subpath = os.getenv('DATAVERSE_SERVICE_SUBPATH', '')
+base_url = os.getenv('BASE_URL', proto+'://'+host+':'+port+subpath)
+
 api_token = os.getenv('API_TOKEN', '')
 
 # sample data will be created in the following order
