@@ -39,19 +39,19 @@ Assuming you have already run the `source` and `cd` commands above, you should b
 
     python create_sample_data.py
 
-All of the steps above can be automated on an fresh installation of Dataverse on an EC2 instance on AWS by downloading [ec2-create-instance.sh][] and [ec2config.yaml][] and executing the script with the config file like this:
+All of the steps above may be automated in a fresh installation of Dataverse on an EC2 instance on AWS by downloading [ec2-create-instance.sh][] and [main.yaml][]. Edit main.yml to set `dataverse.sampledata.enabled: true` and adjust any other settings to your liking, then execute the script with the config file like this:
 
     curl -O https://raw.githubusercontent.com/IQSS/dataverse-ansible/master/ec2/ec2-create-instance.sh
     chmod 755 ec2-create-instance.sh
-    ./ec2-create-instance.sh -g ec2config.yaml
+    ./ec2-create-instance.sh -g main.yml
 
-For more information on spinning up Dataverse on AWS (especially if you don't have the `aws` executable installed), see http://guides.dataverse.org/en/latest/developers/deployment.html
+For more information on spinning up Dataverse in AWS (especially if you don't have the `aws` executable installed), see http://guides.dataverse.org/en/latest/developers/deployment.html
 
 ## Contributing
 
 We love contributors! Please see our [Contributing Guide][] for ways you can help.
 
 [ec2-create-instance.sh]: https://github.com/IQSS/dataverse-ansible/blob/master/ec2/ec2-create-instance.sh
-[ec2config.yaml]: ec2config.yaml
+[ec2config.yaml]: https://raw.githubusercontent.com/IQSS/dataverse-ansible/master/defaults/main.yml
 [Contributing Guide]: CONTRIBUTING.md
 [pyDataverse]: https://pypi.org/project/pyDataverse/
