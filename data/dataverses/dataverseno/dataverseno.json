@@ -1,0 +1,12 @@
+{
+  "name": "DataverseNO",
+  "alias": "dataverseno",
+  "dataverseContacts": [
+    {
+      "displayOrder": 0,
+      "contactEmail": "dataverse-sample-data@mailinator.com"
+    }
+  ],
+  "affiliation": "DataverseNO",
+  "dataverseType": "ORGANIZATIONS_INSTITUTIONS"
+}
