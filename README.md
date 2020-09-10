@@ -51,7 +51,7 @@ For more information on spinning up Dataverse in AWS (especially if you don't ha
 
 We love contributors! Please see our [Contributing Guide][] for ways you can help.
 
-[ec2-create-instance.sh]: https://raw.githubusercontent.com/GlobalDataverseCommunityConsortium/dataverse-ansible/master/ec2/ec2-create-instance.sh
+[ec2-create-instance.sh]: https://github.com/GlobalDataverseCommunityConsortium/dataverse-ansible/blob/master/ec2/ec2-create-instance.sh
 [main.yaml]: https://github.com/GlobalDataverseCommunityConsortium/dataverse-ansible/blob/master/defaults/main.yml
 [Contributing Guide]: CONTRIBUTING.md
 [pyDataverse]: https://pypi.org/project/pyDataverse/
