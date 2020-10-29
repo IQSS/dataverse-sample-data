@@ -33,6 +33,8 @@ Copy `dvconfig.py.sample` to `dvconfig.py` (see the `cp` command below) and add 
     cp dvconfig.py.sample dvconfig.py
     vi dvconfig.py
 
+Note that the environment variable `$API_TOKEN` will override `api_token` in `dvconfig.py`.
+
 ## Adding sample data
 
 Assuming you have already run the `source` and `cd` commands above, you should be able to run the following command to create sample data.

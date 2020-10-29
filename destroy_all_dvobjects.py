@@ -2,8 +2,14 @@ from pyDataverse.api import Api
 import json
 import dvconfig
 import requests
+import os
 base_url = dvconfig.base_url
 api_token = dvconfig.api_token
+try:
+    api_token=os.environ['API_TOKEN']
+    print("Using API token from $API_TOKEN.")
+except:
+    print("Using API token from config file.")
 api = Api(base_url, api_token)
 print('API status: ' +api.status)
 
