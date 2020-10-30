@@ -7,6 +7,11 @@ import requests
 from io import StringIO
 base_url = dvconfig.base_url
 api_token = dvconfig.api_token
+try:
+    api_token=os.environ['API_TOKEN']
+    print("Using API token from $API_TOKEN.")
+except:
+    print("Using API token from config file.")
 paths = dvconfig.sample_data
 api = Api(base_url, api_token)
 print(api.status)
