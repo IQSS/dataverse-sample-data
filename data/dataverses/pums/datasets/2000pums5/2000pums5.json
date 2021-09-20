@@ -1,0 +1,103 @@
+{
+  "datasetVersion": {
+    "id": 4,
+    "datasetId": 12,
+    "datasetPersistentId": "doi:10.5072/FK2/QWVFK0",
+    "storageIdentifier": "file://10.5072/FK2/QWVFK0",
+    "versionNumber": 1,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "UNF": "UNF:6:VDyWtJrNd0VRwAumtzYA1Q==",
+    "lastUpdateTime": "2021-09-20T18:38:32Z",
+    "releaseTime": "2021-09-20T18:38:32Z",
+    "createTime": "2021-09-20T18:16:38Z",
+    "license": "CC0",
+    "termsOfUse": "CC0 Waiver",
+    "fileAccessRequest": false,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2000 PUMS 5-Percent"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "United States Census Bureau"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "United States Census Bureau"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "dataverse@mailinator.com"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "PUMS files have state-level Census 2000 data containing individual records of the characteristics for a 5 percent sample of people and housing units.\n\nThe PUMS files contain geographic units known as super-Public Use Microdata Areas (super-PUMAs) and Public Use Microdata Areas (PUMAs). Each super-PUMA contains a minimum population of 400,000 and each PUMA contains a minimum population threshold of 100,000. Geographic equivalency files that show the relationship between the PUMA and standard Census 2000 geographic concepts (e.g., counties, etc.) are included.\n\nSee <a href=\"https://www.census.gov/data/datasets/2000/dec/microdata.html\">https://www.census.gov/data/datasets/2000/dec/microdata.html</a>"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Admin, Dataverse"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2021-09-20"
+          }
+        ]
+      }
+    },
+    "citation": "United States Census Bureau, 2021, \"2000 PUMS 5-Percent\", https://doi.org/10.5072/FK2/QWVFK0, Root, V1, UNF:6:VDyWtJrNd0VRwAumtzYA1Q== [fileUNF]"
+  }
+}

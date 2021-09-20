@@ -1,0 +1,12 @@
+{
+  "name": "PUMS",
+  "alias": "pums",
+  "dataverseContacts": [
+    {
+      "contactEmail": "dataverse@mailinator.com"
+    }
+  ],
+  "affiliation": "United States Census Bureau",
+  "description": "The Census Bureau’s American Community Survey (ACS) Public Use Microdata Sample (PUMS) files enable data users to create custom estimates and tables, free of charge, that are not available through ACS pretabulated data products.  The ACS PUMS files are a set of records from individual people or housing units, with disclosure protection enabled so that individuals or housing units cannot be identified. See <a href=\"https://www.census.gov/programs-surveys/acs/microdata.html\">https://www.census.gov/programs-surveys/acs/microdata.html</a>.",
+  "dataverseType": "RESEARCHERS"
+}
