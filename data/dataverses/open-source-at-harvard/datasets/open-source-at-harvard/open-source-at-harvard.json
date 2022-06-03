@@ -10,7 +10,7 @@
     "lastUpdateTime": "2019-02-26T03:03:13Z",
     "releaseTime": "2019-02-26T03:03:13Z",
     "createTime": "2019-02-26T02:55:59Z",
-    "license": "CC0",
+    "license": "CC0 1.0",
     "termsOfUse": "CC0 Waiver",
     "metadataBlocks": {
       "citation": {
@@ -20,7 +20,7 @@
             "typeName": "title",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "Open Source at Harvard - File Hierarchy, Descriptions, Tags and Restrictions"
+            "value": "Open Source at Harvard"
           },
           {
             "typeName": "author",

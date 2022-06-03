@@ -1,7 +1,8 @@
 {
-   "description": "This is the master script",
+   "description": "This is the master script.",
    "categories":
       [
-         "tagCode"
+         "Code",
+         "Workflow"
       ]
 }
