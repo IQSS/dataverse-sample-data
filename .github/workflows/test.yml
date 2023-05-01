@@ -29,6 +29,9 @@ jobs:
       - name: Create sample data
         run: |
           pwd
+          find .
+          pwd
+          find ..
           ls
           python3 -m venv venv
           source venv/bin/activate
