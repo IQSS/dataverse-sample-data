@@ -7,33 +7,35 @@ jobs:
     name: "Test create sample data"
     runs-on: ubuntu-latest
     steps:
-      - name: Clone Dataverse repo
-        uses: actions/checkout@v2
-        with:
-          repository: iqss/dataverse
-          path: dataverse
-          ref: develop
-      - name: Start containers
-        run: |
-          docker-compose -f "./dataverse/docker-compose-dev.yml" up -d --build
-      - name: Wait for container setup
-        run: sleep 90s
-      - name: Run final setup script
-        run: |
-          cd ./dataverse
-          bash ./scripts/dev/docker-final-setup.sh
-          cd ..
-      - name: Test container
-        run: |
-          curl localhost:8080/api/metadatablocks
+      # - name: Clone Dataverse repo
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: iqss/dataverse
+      #     path: dataverse
+      #     ref: develop
+      # - name: Start containers
+      #   run: |
+      #     docker-compose -f "./dataverse/docker-compose-dev.yml" up -d --build
+      # - name: Wait for container setup
+      #   run: sleep 90s
+      # - name: Run final setup script
+      #   run: |
+      #     cd ./dataverse
+      #     bash ./scripts/dev/docker-final-setup.sh
+      #     cd ..
+      # - name: Test container
+      #   run: |
+      #     curl localhost:8080/api/metadatablocks
       - name: Create sample data
         run: |
+          pwd
+          ls
           python3 -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
           cp dvconfig.py.sample dvconfig.py
           source export-api-token.sh
           python create_sample_data.py
-      - name: Stop containers
-        if: always()
-        run: docker-compose -f "./dataverse/docker-compose-dev.yml" down
+      # - name: Stop containers
+      #   if: always()
+      #   run: docker-compose -f "./dataverse/docker-compose-dev.yml" down
