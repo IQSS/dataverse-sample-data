@@ -26,6 +26,11 @@ jobs:
       # - name: Test container
       #   run: |
       #     curl localhost:8080/api/metadatablocks
+      - name: Clone sample data repo
+        uses: actions/checkout@v3
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       - name: Create sample data
         run: |
           pwd
