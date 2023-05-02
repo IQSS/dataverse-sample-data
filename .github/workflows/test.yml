@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Dataverse repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: IQSS/dataverse
           path: dataverse
@@ -28,6 +28,7 @@ jobs:
       #     curl localhost:8080/api/metadatablocks
       - name: Clone sample data repo
         uses: actions/checkout@v3
+        with:
           repository: IQSS/dataverse-sample-data
           path: dataverse-sample-data
       - name: List files in the repository
