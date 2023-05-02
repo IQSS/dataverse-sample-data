@@ -15,6 +15,7 @@ jobs:
           ref: develop
       - name: Start containers
         run: |
+          export DATAVERSE_FILES_DIRECTORY="/tmp"
           docker-compose -f "./dataverse/docker-compose-dev.yml" up -d --build
       - name: Wait for container setup
         run: sleep 90s
