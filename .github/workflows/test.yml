@@ -16,7 +16,8 @@ jobs:
       - name: Start containers
         run: |
           cd dataverse
-          STORAGE_DIR="/github/workspace" docker-compose -f docker-compose-dev.yml up -d --build
+          export STORAGE_DIR="/github/workspace"
+          docker-compose -f docker-compose-dev.yml up -d --build
           cd ..
           docker ps
       - name: Wait for container setup
