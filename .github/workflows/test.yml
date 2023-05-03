@@ -7,17 +7,23 @@ jobs:
     name: "Test create sample data"
     runs-on: ubuntu-latest
     steps:
+      - name: Clone sample data repo
+        uses: actions/checkout@v3
+        with:
+          repository: IQSS/dataverse-sample-data
+          path: dataverse-sample-data
       - name: Clone Dataverse repo
         uses: actions/checkout@v3
         with:
           repository: IQSS/dataverse
           path: dataverse
           ref: develop
+
       - name: Start containers
         run: |
           cd dataverse
           export STORAGE_DIR="/github/workspace"
-          docker-compose -f docker-compose-dev.yml up -d --build
+          docker-compose -f docker-compose-dev.yml up -d --build --env-file dataverse-sample-data/.env.ci
           cd ..
           docker ps
       - name: Wait for container setup
@@ -30,11 +36,7 @@ jobs:
       - name: Test container
         run: |
           curl localhost:8080/api/metadatablocks
-      - name: Clone sample data repo
-        uses: actions/checkout@v3
-        with:
-          repository: IQSS/dataverse-sample-data
-          path: dataverse-sample-data
+
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
@@ -47,6 +49,7 @@ jobs:
           cp dvconfig.py.sample dvconfig.py
           source export-api-token.sh
           python create_sample_data.py
+
       - name: Dump docker logs on failure
         if: failure()
         uses: jwalton/gh-docker-logs@v2
