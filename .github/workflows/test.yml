@@ -20,8 +20,15 @@ jobs:
         run: |
           docker compose -f docker-compose-ci.yml --env-file .env.ci up -d
           docker ps
-      - name: Wait for container setup
-        run: sleep 90s
+      - uses: emilioschepis/wait-for-endpoint@v1.0.3
+        with:
+          url: http://localhost:8080/api/version
+          timeout: 120000
+          interval: 10000
+      - name: List files in the repository
+        run: |
+          echo ${RUNNER_TEMP}
+          ls -laR ${RUNNER_TEMP}
       - name: Run final setup script
         run: |
           cd dataverse
