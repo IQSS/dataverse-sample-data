@@ -55,8 +55,8 @@ services:
     volumes:
       - ${RUNNER_TEMP}/solr/data:/var/solr
       - ${RUNNER_TEMP}/solr/conf:/conf
-      - dataverse/conf/solr/8.11.1/schema.xml:/schema.xml
-      - dataverse/conf/solr/8.11.1/solrconfig.xml:/solrconfig.xml
+      - ./dataverse/conf/solr/8.11.1/schema.xml:/schema.xml
+      - ./dataverse/conf/solr/8.11.1/solrconfig.xml:/solrconfig.xml
 
   dev_solr:
     container_name: "dev_solr"
