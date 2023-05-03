@@ -22,7 +22,7 @@ jobs:
           docker ps
       - uses: emilioschepis/wait-for-endpoint@v1.0.3
         with:
-          url: http://localhost:8080/api/version
+          url: http://localhost:8080/api/info/version
           timeout: 120000
           interval: 10000
       - name: List files in the repository
