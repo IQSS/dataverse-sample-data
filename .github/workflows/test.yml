@@ -9,9 +9,6 @@ jobs:
     steps:
       - name: Clone sample data repo
         uses: actions/checkout@v3
-        with:
-          repository: IQSS/dataverse-sample-data
-          path: dataverse-sample-data
       - name: Clone Dataverse repo
         uses: actions/checkout@v3
         with:
@@ -21,27 +18,22 @@ jobs:
 
       - name: Start containers
         run: |
-          cd dataverse
-          docker-compose -f docker-compose-dev.yml --env-file ../dataverse-sample-data/.env.ci up -d --build
-          cd ..
+          docker compose -f docker-compose-ci.yml --env-file .env.ci up -d
           docker ps
       - name: Wait for container setup
         run: sleep 90s
       - name: Run final setup script
         run: |
-          cd ./dataverse
-          bash ./scripts/dev/docker-final-setup.sh
-          cd ..
+          bash dataverse/scripts/dev/docker-final-setup.sh
       - name: Test container
         run: |
           curl localhost:8080/api/metadatablocks
 
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls -laR ${{ env.RUNNER_TEMP }}
       - name: Create sample data
         run: |
-          cd dataverse-sample-data
           python3 -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
@@ -54,4 +46,4 @@ jobs:
         uses: jwalton/gh-docker-logs@v2
       - name: Stop containers
         if: always()
-        run: docker-compose -f "./dataverse/docker-compose-dev.yml" down
+        run: docker compose -f docker-compose-ci.yml down
