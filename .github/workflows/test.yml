@@ -25,10 +25,6 @@ jobs:
           url: http://localhost:8080/api/info/version
           timeout: 120000
           interval: 10000
-      - name: List files in the repository
-        run: |
-          echo ${RUNNER_TEMP}
-          ls -laR ${RUNNER_TEMP}
       - name: Run final setup script
         run: |
           cd dataverse
@@ -38,9 +34,9 @@ jobs:
         run: |
           curl localhost:8080/api/metadatablocks
 
-      - name: List files in the repository
-        run: |
-          ls -laR ${{ env.RUNNER_TEMP }}
+      #- name: List files in the repository
+      #  run: |
+      #    ls -laR ${{ env.RUNNER_TEMP }}
       - name: Create sample data
         run: |
           python3 -m venv venv
