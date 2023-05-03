@@ -19,6 +19,7 @@ jobs:
           export DATAVERSE_FILES_DIRECTORY="/github/workspace"
           docker-compose -f docker-compose-dev.yml up -d --build
           cd ..
+          docker ps
       - name: Wait for container setup
         run: sleep 90s
       - name: Run final setup script
@@ -46,6 +47,9 @@ jobs:
           cp dvconfig.py.sample dvconfig.py
           source export-api-token.sh
           python create_sample_data.py
+      - name: Dump docker logs on failure
+        if: failure()
+        uses: jwalton/gh-docker-logs@v2
       - name: Stop containers
         if: always()
         run: docker-compose -f "./dataverse/docker-compose-dev.yml" down
