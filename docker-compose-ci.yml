@@ -2,6 +2,18 @@ version: "2.4"
 
 services:
 
+  dev_dataverse_initializer:
+    container_name: "dev_dataverse_initializer"
+    image: alpine
+    restart: "no"
+    command:
+      - sh
+      - -c
+      - "chown 1000:1000 /dv /secrets"
+    volumes:
+      - ${RUNNER_TEMP}/app/data:/dv
+      - ${RUNNER_TEMP}/app/secrets:/secrets
+
   dev_dataverse:
     container_name: "dev_dataverse"
     hostname: dataverse
@@ -17,6 +29,7 @@ services:
     networks:
       - dataverse
     depends_on:
+      - dev_dataverse_initializer
       - dev_postgres
       - dev_solr
     volumes:
