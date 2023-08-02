@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   test_create_sample_data:
-    name: "Test create sample data "
+    name: "Test create sample data"
     runs-on: ubuntu-latest
     steps:
       - name: Clone sample data repo
