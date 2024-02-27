@@ -1,0 +1,215 @@
+{
+  "datasetVersion": {
+    "id": 303243,
+    "datasetId": 5790232,
+    "datasetPersistentId": "doi:10.7910/DVN/UTY03A",
+    "storageIdentifier": "s3://10.7910/DVN/UTY03A",
+    "versionNumber": 1,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "lastUpdateTime": "2022-01-24T19:22:49Z",
+    "releaseTime": "2022-01-24T19:22:49Z",
+    "createTime": "2022-01-24T19:09:53Z",
+    "license": {
+      "name": "CC0 1.0",
+      "uri": "http://creativecommons.org/publicdomain/zero/1.0"
+    },
+    "fileAccessRequest": false,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Replication Data for: initial study on predicting earthquakes using machine learning"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Martins, Gustavo"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Martins, Gustavo"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "gustavo.bmg@gmail.com"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "<strong>Context</strong><br><br>\n\nAll earthquakes from 1930 until 2018.<br>\n\nI' using this data on a side/pet project, trying to predict when a quake will happen.<br><br>\n\n<strong>Content</strong><br><br>\n\nAll earthquakes from 1930 until 2018, worldwide. Contain basic information such as location, time and magnitude.<br><br>\n\n<strong>Acknowledgements</strong><br><br>\n\n<a href=\"https://www.usgs.gov/\">The United States Geological Survey (USGS)</a>"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Computer and Information Science",
+              "Earth and Environmental Sciences",
+              "Physics"
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "earthquake"
+                }
+              },
+              {
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "machine learning"
+                }
+              },
+              {
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "artificial intelligence"
+                }
+              },
+              {
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "data science"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "publication",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://medium.com/marionete/predicting-earthquakes-using-machine-learning-21689435dc52"
+                },
+                "publicationURL": {
+                  "typeName": "publicationURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://medium.com/marionete/predicting-earthquakes-using-machine-learning-21689435dc52"
+                }
+              },
+              {
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "U.S. Geological Survey, “Earthquakes for ML prediction.” Kaggle, 2021, doi: 10.34740/KAGGLE/DSV/2795577."
+                },
+                "publicationIDType": {
+                  "typeName": "publicationIDType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "doi"
+                },
+                "publicationIDNumber": {
+                  "typeName": "publicationIDNumber",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "10.34740/kaggle/dsv/2795577"
+                },
+                "publicationURL": {
+                  "typeName": "publicationURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://www.kaggle.com/gustavobmgm/earthquakes-for-ml-prediction/metadata"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "notesText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "The United States Geological Survey (USGS) earthquake catalog https://earthquake.usgs.gov/earthquakes/search/\nShared following instructions from here https://www.usgs.gov/products/data-and-tools/data-management/publishshare"
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Martins, Gustavo"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2022-01-24"
+          },
+          {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "https://www.usgs.gov/"
+            ]
+          },
+          {
+            "typeName": "dataSources",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "https://www.usgs.gov/"
+            ]
+          }
+        ]
+      }
+    },
+    "citation": "Martins, Gustavo, 2022, \"Replication Data for: initial study on predicting earthquakes using machine learning\", https://doi.org/10.7910/DVN/UTY03A, Harvard Dataverse, V1"
+  }
+}
