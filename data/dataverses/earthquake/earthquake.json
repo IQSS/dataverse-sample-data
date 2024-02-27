@@ -1,0 +1,11 @@
+{
+  "name": "Earthquake Prediction",
+  "alias": "earthquake",
+  "dataverseContacts": [
+    {
+      "contactEmail": "dataverse@mailinator.com"
+    }
+  ],
+  "description": "Predicting Earthquakes using Machine Learning",
+  "dataverseType": "RESEARCHERS"
+}
