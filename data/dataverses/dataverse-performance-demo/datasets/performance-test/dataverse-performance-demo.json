@@ -1,0 +1,12 @@
+{
+  "name": "Dataverse performance demo",
+  "alias": "dataverse-performance-demo",
+  "dataverseContacts": [
+    {
+      "contactEmail": "juan_tosca@iq.harvard.edu"
+    }
+  ],
+  "affiliation": "Harvard University",
+  "description": "Demo created for performance testing",
+  "dataverseType": "RESEARCH_PROJECTS"
+}

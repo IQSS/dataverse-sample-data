@@ -26,7 +26,7 @@ Activate the virtual environment you just created.
 
 Install dependencies into the virtual environment, especially [pyDataverse][].
 
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 
 Copy `dvconfig.py.sample` to `dvconfig.py` (see the `cp` command below) and add your API token (using your favorite text editor, which may not be `vi` as shown below). Note that the config file specifies which sample data will be created.
 
@@ -35,11 +35,19 @@ Copy `dvconfig.py.sample` to `dvconfig.py` (see the `cp` command below) and add 
 
 Note that the environment variable `$API_TOKEN` will override `api_token` in `dvconfig.py`.
 
+## Adding a custom dataset with specific number of files
+
+If you want to create a dataset that include a specific number of files you can use this step 
+
 ## Adding sample data
 
 Assuming you have already run the `source` and `cd` commands above, you should be able to run the following command to create sample data.
 
     python create_sample_data.py
+
+    https://github.com/Kozea/CairoSVG/issues/392#issuecomment-1927435606
+
+    export DYLD_LIBRARY_PATH="/opt/homebrew/opt/cairo/lib:$DYLD_LIBRARY_PATH"
 
 All of the steps above may be automated in a fresh installation of Dataverse on an EC2 instance on AWS by downloading [ec2-create-instance.sh][] and [main.yaml][]. Edit main.yml to set `dataverse.sampledata.enabled: true` and adjust any other settings to your liking, then execute the script with the config file like this:
 

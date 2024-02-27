@@ -3,3 +3,6 @@ __pycache__
 dvconfig.py
 ec2-create-instance.sh
 venv
+dv_logo_*.png
+*.DS_Store
+sample.sh
