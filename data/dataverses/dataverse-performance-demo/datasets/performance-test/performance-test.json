@@ -1,0 +1,103 @@
+{
+    "datasetVersion": {
+      "id": 4,
+      "datasetId": 12,
+      "datasetPersistentId": "doi:10.5072/FK2/JPT050",
+      "storageIdentifier": "file://10.5072/FK2/JPT050",
+      "versionNumber": 1,
+      "versionMinorNumber": 0,
+      "versionState": "RELEASED",
+      "UNF": "UNF:6:VDyWtJrNd0VRwAumtzYA1Q==",
+      "lastUpdateTime": "2021-09-20T18:38:32Z",
+      "releaseTime": "2021-09-20T18:38:32Z",
+      "createTime": "2021-09-20T18:16:38Z",
+      "license": "CC0 1.0",
+      "termsOfUse": "CC0 Waiver",
+      "fileAccessRequest": false,
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Dataverse performance test dataset"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Juan Pablo Tosca Villanueva"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Juan Pablo Tosca Villanueva"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "dataverse@mailinator.com"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "This is a test dataset to measure the performance of the Dataverse software."
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Social Sciences"
+              ]
+            },
+            {
+              "typeName": "depositor",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Admin, Dataverse"
+            },
+            {
+              "typeName": "dateOfDeposit",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2024-05-05"
+            }
+          ]
+        }
+      },
+      "citation": "IQSS, 2024, \"Dataverse performance test\", https://doi.org/10.5072/FK2/JPT050, Root, V1"
+    }
+  }
