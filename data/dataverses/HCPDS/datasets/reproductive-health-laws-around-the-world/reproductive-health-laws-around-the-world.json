@@ -30,9 +30,9 @@
           },
           {
             "typeName": "alternativeTitle",
-            "multiple": false,
+            "multiple": true,
             "typeClass": "primitive",
-            "value": "Reproductive Health Laws"
+            "value": ["Reproductive Health Laws"]
           },
           {
             "typeName": "author",
