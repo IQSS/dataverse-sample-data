@@ -41,7 +41,7 @@ You can add a specific number of files to the dataset "Dataverse performance tes
     
     python create_sample_custom_dataset.py
 
-You will be asked how many files do you want to create and will generate the specified number of files with the dataverse logo with a random color with the PNG extension. This step has to be done before you add the data or the dataset will be empty.
+You'll be prompted to specify the number of files you wish to create. The application will then generate the requested number of files, each one with the Dataverse logo in a randomly chosen color. These files will be in PNG format. It's important to complete this step before adding any data, as the dataset will otherwise be empty.
 
 If you experience the `OSError: no library called "cairo-2" was found` error please declare the following env variable as documented [here](https://github.com/Kozea/CairoSVG/issues/392#issuecomment-1927435606
 ):
