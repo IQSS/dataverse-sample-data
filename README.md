@@ -37,13 +37,13 @@ Note that the environment variable `$API_TOKEN` will override `api_token` in `dv
 
 ## Adding a custom dataset with specific number of files
 
-If you want to create a dataset that include a specific number of Dataverse logos with randomized color you can use:
+You can add a specific number of files to the dataset "Dataverse performance test dataset" with:
     
     python create_sample_custom_dataset.py
 
-You will require to input how many files do you want to create, this step has to be done before you add the sample data or the dataset Dataverse performance test dataset will be empty.
+You will be asked how many files do you want to create and will generate the specified number of files with the dataverse logo with a random color with the PNG extension. This step has to be done before you add the data or the dataset will be empty.
 
-If you experience any cairo errors please declare the following env variable as documented [here](https://github.com/Kozea/CairoSVG/issues/392#issuecomment-1927435606
+If you experience the `OSError: no library called "cairo-2" was found` error please declare the following env variable as documented [here](https://github.com/Kozea/CairoSVG/issues/392#issuecomment-1927435606
 ):
 
     export DYLD_LIBRARY_PATH="/opt/homebrew/opt/cairo/lib:$DYLD_LIBRARY_PATH"
