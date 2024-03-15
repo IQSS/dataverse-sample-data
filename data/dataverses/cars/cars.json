@@ -1,0 +1,11 @@
+{
+  "name": "Cars",
+  "alias": "cars",
+  "dataverseContacts": [
+    {
+      "contactEmail": "dataverse@mailinator.com"
+    }
+  ],
+  "description": "Data about cars.",
+  "dataverseType": "RESEARCHERS"
+}
