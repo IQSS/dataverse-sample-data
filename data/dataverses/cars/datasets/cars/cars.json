@@ -40,13 +40,13 @@
                   "typeName": "authorName",
                   "multiple": false,
                   "typeClass": "primitive",
-                  "value": "Admin, Dataverse"
+                  "value": "Durbin, Philip"
                 },
                 "authorAffiliation": {
                   "typeName": "authorAffiliation",
                   "multiple": false,
                   "typeClass": "primitive",
-                  "value": "Dataverse.org"
+                  "value": "Harvard"
                 }
               }
             ]
@@ -61,13 +61,13 @@
                   "typeName": "datasetContactName",
                   "multiple": false,
                   "typeClass": "primitive",
-                  "value": "Admin, Dataverse"
+                  "value": "Durbin, Philip"
                 },
                 "datasetContactAffiliation": {
                   "typeName": "datasetContactAffiliation",
                   "multiple": false,
                   "typeClass": "primitive",
-                  "value": "Dataverse.org"
+                  "value": "Harvard"
                 },
                 "datasetContactEmail": {
                   "typeName": "datasetContactEmail",
@@ -88,7 +88,7 @@
                   "typeName": "dsDescriptionValue",
                   "multiple": false,
                   "typeClass": "primitive",
-                  "value": "qqq"
+                  "value": "This dataset is about cars."
                 }
               }
             ]
@@ -105,7 +105,7 @@
             "typeName": "depositor",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "Admin, Dataverse"
+            "value": "Durbin, Philip"
           },
           {
             "typeName": "dateOfDeposit",
@@ -115,7 +115,6 @@
           }
         ]
       }
-    },
-    "citation": "Admin, Dataverse, 2024, \"Cars\", https://doi.org/10.5072/FK2/MSZXZZ, Root, V1, UNF:6:RPd9EWHSZwqUvRZuKTJMqg== [fileUNF]"
+    }
   }
 }
