@@ -1,4 +1,4 @@
-from pyDataverse.api import Api
+from pyDataverse.api import NativeApi
 import json
 import dvconfig
 import os
@@ -13,8 +13,8 @@ try:
 except:
     print("Using API token from config file.")
 paths = dvconfig.sample_data
-api = Api(base_url, api_token)
-print(api.status)
+api = NativeApi(base_url, api_token)
+print(api.get_info_version())
 # TODO limit amount of recursion
 def check_dataset_lock(dataset_dbid):
     query_str = '/datasets/' + str(dataset_dbid) + '/locks'
@@ -48,9 +48,8 @@ for path in paths:
         with open(dv_json) as f:
             metadata = json.load(f)
         print(metadata)
-        # FIXME: Why is "identifier" required?
         identifier = metadata['alias']
-        resp = api.create_dataverse(identifier, json.dumps(metadata), parent=parent)
+        resp = api.create_dataverse(parent, json.dumps(metadata))
         print(resp)
         resp = api.publish_dataverse(identifier)
         print(resp)
