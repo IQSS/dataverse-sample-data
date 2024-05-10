@@ -1,4 +1,5 @@
-from pyDataverse.api import Api
+from pyDataverse.api import NativeApi
+from pyDataverse.models import Datafile
 import json
 import dvconfig
 import os
@@ -13,18 +14,16 @@ try:
 except:
     print("Using API token from config file.")
 paths = dvconfig.sample_data
-api = Api(base_url, api_token)
-print(api.status)
+api = NativeApi(base_url, api_token)
+print(api.get_info_version())
 # TODO limit amount of recursion
-def check_dataset_lock(dataset_dbid):
-    query_str = '/datasets/' + str(dataset_dbid) + '/locks'
-    params = {}
-    resp = api.get_request(query_str, params=params, auth=True)
+def check_dataset_lock(dataset_pid):
+    resp = api.get_dataset_lock(dataset_pid)
     locks = resp.json()['data']
     if (locks):
-        print('Lock found for dataset id ' + str(dataset_dbid) + '... sleeping...')
+        print('Lock found for dataset id ' + str(dataset_pid) + '... sleeping...')
         time.sleep(2)
-        check_dataset_lock(dataset_dbid)
+        check_dataset_lock(dataset_pid)
 resp = api.get_dataverse(':root')
 buff = StringIO("")
 if (resp.status_code == 401):
@@ -48,9 +47,8 @@ for path in paths:
         with open(dv_json) as f:
             metadata = json.load(f)
         print(metadata)
-        # FIXME: Why is "identifier" required?
         identifier = metadata['alias']
-        resp = api.create_dataverse(identifier, json.dumps(metadata), parent=parent)
+        resp = api.create_dataverse(parent, json.dumps(metadata))
         print(resp)
         resp = api.publish_dataverse(identifier)
         print(resp)
@@ -73,12 +71,15 @@ for path in paths:
                 relpath = os.path.relpath(filepath,files_dir)
                 # "directoryLabel" is used to populate "File Path"
                 directoryLabel, filename = os.path.split(relpath)
-                resp = api.upload_file(dataset_pid, "'" + filepath + "'")
+                df = Datafile()
+                df_filename = filepath
+                df.set({"pid": dataset_pid, "filename": df_filename})
+                resp = api.upload_datafile(dataset_pid, df_filename, df.json())
                 print(resp)
-                file_id = resp['data']['files'][0]['dataFile']['id']
+                file_id = resp.json()['data']['files'][0]['dataFile']['id']
                 ## This lock check and sleep is here to prevent the dataset from being permanently
                 ## locked because a tabular file was uploaded first.
-                check_dataset_lock(dataset_dbid)
+                check_dataset_lock(dataset_pid)
                 # TODO: Think more about where the description comes from. A "sidecar" file as proposed at https://github.com/IQSS/dataverse/issues/5924#issuecomment-499605672 ?
                 # L.A.: I implemented something along these lines - an (optional) directory called ".filemetadata" 
                 # in the dataset directory, where files containing extra json filemetadata records may be 
