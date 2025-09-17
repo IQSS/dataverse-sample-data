@@ -35,7 +35,7 @@ Copy `dvconfig.py.sample` to `dvconfig.py` (see the `cp` command below) and add 
 
 Note that the environment variable `$API_TOKEN` will override `api_token` in `dvconfig.py`.
 
-## Adding a custom dataset with specific number of files
+## (Optional) Adding a custom dataset with specific number of files
 
 You can add a specific number of files to the dataset "Dataverse performance test dataset" with:
     
