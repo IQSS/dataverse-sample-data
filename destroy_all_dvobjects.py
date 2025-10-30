@@ -1,5 +1,4 @@
-from pyDataverse.api import Api
-import json
+from pyDataverse.api import NativeApi
 import dvconfig
 import requests
 import os
@@ -10,8 +9,8 @@ try:
     print("Using API token from $API_TOKEN.")
 except:
     print("Using API token from config file.")
-api = Api(base_url, api_token)
-print('API status: ' +api.status)
+api = NativeApi(base_url, api_token)
+print(api.get_info_version())
 
 dataverse_ids = []
 dataset_ids = []
@@ -35,9 +34,7 @@ def main():
     print("Done.")
 
 def find_children(dataverse_database_id):
-    query_str = '/dataverses/' + str(dataverse_database_id) + '/contents'
-    params = {}
-    resp = api.get_request(query_str, params=params, auth=True)
+    resp = api.get_dataverse_contents(dataverse_database_id)
     for dvobject in resp.json()['data']:
         dvtype = dvobject['type']
         dvid = dvobject['id']
