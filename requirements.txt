@@ -1,2 +1,3 @@
-pyDataverse==0.2.1
+pyDataverse==0.3.5
 CairoSVG==2.7.1
+requests==2.32.5
