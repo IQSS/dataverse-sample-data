@@ -10,7 +10,7 @@ try:
 except:
     print("Using API token from config file.")
 api = NativeApi(base_url, api_token)
-print(api.get_info_version())
+print(api.get_info_version().json())
 
 dataverse_ids = []
 dataset_ids = []

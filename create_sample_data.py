@@ -15,7 +15,7 @@ except:
     print("Using API token from config file.")
 paths = dvconfig.sample_data
 api = NativeApi(base_url, api_token)
-print(api.get_info_version())
+print(api.get_info_version().json())
 # TODO limit amount of recursion
 def check_dataset_lock(dataset_pid):
     resp = api.get_dataset_lock(dataset_pid)
