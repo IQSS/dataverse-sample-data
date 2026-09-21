@@ -4,5 +4,6 @@ dvconfig.py
 ec2-create-instance.sh
 venv
 dv_logo_*.png
+batch_file_*
 *.DS_Store
 sample.sh
